@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="ui">
+    <body>
+      <!-- ==================== PrimeMatch Form Labels ==================== -->
+      <trans-unit id="1" resname="pm_title">
+        <source>PrimeMatch | AI Screener</source>
+        <target>PrimeMatch | Filtre IA</target>
+      </trans-unit>
+      <trans-unit id="2" resname="pm_ai_settings">
+        <source>Settings...</source>
+        <target>Réglages...</target>
+      </trans-unit>
+      <trans-unit id="3" resname="pm_mandate_input">
+        <source>MANDATE INPUT</source>
+        <target>SAISIE DU MANDAT</target>
+      </trans-unit>
+      <trans-unit id="4" resname="pm_region">
+        <source>Region:</source>
+        <target>Région :</target>
+      </trans-unit>
+      <trans-unit id="5" resname="pm_asset_type">
+        <source>Asset Type:</source>
+        <target>Type d'actif :</target>
+      </trans-unit>
+      <trans-unit id="6" resname="pm_min_yield">
+        <source>Min Yield:</source>
+        <target>Rdt min. :</target>
+      </trans-unit>
+      <trans-unit id="7" resname="pm_thesis_label">
+        <source>Investment Thesis / Mandate:</source>
+        <target>Thèse d'investissement / Mandat :</target>
+      </trans-unit>
+      <trans-unit id="8" resname="pm_execute">
+        <source>Execute Intelligence Match</source>
+        <target>Lancer l'analyse sémantique</target>
+      </trans-unit>
+      <trans-unit id="9" resname="pm_demo_section">
+        <source>DEMO SCENARIOS</source>
+        <target>SCÉNARIOS DE DÉMO</target>
+      </trans-unit>
+      <trans-unit id="10" resname="pm_demo_a">
+        <source>A: Sustainable Office</source>
+        <target>A : Bureau durable</target>
+      </trans-unit>
+      <trans-unit id="11" resname="pm_demo_b">
+        <source>B: Distressed Assets</source>
+        <target>B : Actifs en difficulté</target>
+      </trans-unit>
+      <trans-unit id="12" resname="pm_demo_c">
+        <source>C: Urban Logistics (FR)</source>
+        <target>C : Logistique urbaine</target>
+      </trans-unit>
+      <trans-unit id="13" resname="pm_demo_d">
+        <source>D: Premium Office</source>
+        <target>D : Bureaux haut de gamme</target>
+      </trans-unit>
+      <trans-unit id="14" resname="pm_load_data">
+        <source>Load Demo Data</source>
+        <target>Charger les données</target>
+      </trans-unit>
+      <trans-unit id="15" resname="pm_regenerate">
+        <source>Regenerate Embeddings</source>
+        <target>Regénérer les vecteurs</target>
+      </trans-unit>
+      <trans-unit id="16" resname="pm_results">
+        <source>MATCH RESULTS</source>
+        <target>RÉSULTATS</target>
+      </trans-unit>
+      <trans-unit id="17" resname="pm_detail">
+        <source>PROPERTY DETAIL &amp; SEMANTIC INSIGHT</source>
+        <target>DÉTAIL DU BIEN &amp; ANALYSE SÉMANTIQUE</target>
+      </trans-unit>
+      <trans-unit id="18" resname="pm_description">
+        <source>Description:</source>
+        <target>Description :</target>
+      </trans-unit>
+      <trans-unit id="19" resname="pm_highlights">
+        <source>Semantic Highlights:</source>
+        <target>Points sémantiques clés :</target>
+      </trans-unit>
+      <trans-unit id="20" resname="pm_footer">
+        <source>PrimeMatch v1.0 · 4D + AI Vector Search  |  Offline-First Desktop Intelligence</source>
+        <target>PrimeMatch v1.0 · 4D + Recherche vectorielle IA  |  Intelligence desktop hors-ligne</target>
+      </trans-unit>
+      <trans-unit id="21" resname="pm_col_match">
+        <source>Match %</source>
+        <target>Match %</target>
+      </trans-unit>
+      <trans-unit id="22" resname="pm_col_name">
+        <source>Property Name</source>
+        <target>Nom du bien</target>
+      </trans-unit>
+      <trans-unit id="23" resname="pm_col_region">
+        <source>Region</source>
+        <target>Région</target>
+      </trans-unit>
+      <trans-unit id="24" resname="pm_col_asset">
+        <source>Asset Type</source>
+        <target>Type d'actif</target>
+      </trans-unit>
+      <trans-unit id="25" resname="pm_col_yield">
+        <source>Yield %</source>
+        <target>Rdt %</target>
+      </trans-unit>
+      <trans-unit id="26" resname="pm_col_price">
+        <source>Price ($)</source>
+        <target>Prix ($)</target>
+      </trans-unit>
+      <trans-unit id="27" resname="pm_col_sqft">
+        <source>Sq Ft</source>
+        <target>m²</target>
+      </trans-unit>
+      <trans-unit id="28" resname="pm_thesis_placeholder">
+        <source>Describe your investment strategy...</source>
+        <target>Décrivez votre stratégie d'investissement...
+ex. « Entrepôt logistique du dernier kilomètre avec énergie verte »</target>
+      </trans-unit>
+
+      <!-- ==================== AIConfig Form Labels ==================== -->
+      <trans-unit id="50" resname="ac_title">
+        <source>Settings</source>
+        <target>Réglages</target>
+      </trans-unit>
+      <trans-unit id="50b" resname="ac_lang_section">
+        <source>LANGUAGE</source>
+        <target>LANGUE</target>
+      </trans-unit>
+      <trans-unit id="50c" resname="ac_language">
+        <source>Language:</source>
+        <target>Langue :</target>
+      </trans-unit>
+      <trans-unit id="51" resname="ac_embed_section">
+        <source>EMBEDDING SERVER &amp; MODEL</source>
+        <target>SERVEUR &amp; MODÈLE D'EMBEDDING</target>
+      </trans-unit>
+      <trans-unit id="52" resname="ac_server">
+        <source>Server:</source>
+        <target>Serveur :</target>
+      </trans-unit>
+      <trans-unit id="53" resname="ac_model">
+        <source>Model:</source>
+        <target>Modèle :</target>
+      </trans-unit>
+      <trans-unit id="54" resname="ac_refresh">
+        <source>Refresh</source>
+        <target>Actualiser</target>
+      </trans-unit>
+      <trans-unit id="55" resname="ac_chat_section">
+        <source>CHAT SERVER &amp; MODEL</source>
+        <target>SERVEUR &amp; MODÈLE DE CHAT</target>
+      </trans-unit>
+      <trans-unit id="56" resname="ac_openai_section">
+        <source>OPENAI API KEY</source>
+        <target>CLÉ API OPENAI</target>
+      </trans-unit>
+      <trans-unit id="57" resname="ac_set_key">
+        <source>Set Key...</source>
+        <target>Définir...</target>
+      </trans-unit>
+      <trans-unit id="58" resname="ac_save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="59" resname="ac_cancel">
+        <source>Cancel</source>
+        <target>Annuler</target>
+      </trans-unit>
+
+      <!-- ==================== Dynamic Code Messages ==================== -->
+      <trans-unit id="100" resname="msg_ready">
+        <source>Ready. Load demo data or enter a mandate to search.</source>
+        <target>Prêt. Chargez les données de démo ou saisissez un mandat pour rechercher.</target>
+      </trans-unit>
+      <trans-unit id="101" resname="msg_props_in_db">
+        <source>{1} properties in database. Ready to search.</source>
+        <target>{1} biens en base de données. Prêt pour la recherche.</target>
+      </trans-unit>
+      <trans-unit id="102" resname="msg_no_embeddings_yet">
+        <source>No embeddings yet</source>
+        <target>Pas encore de vecteurs</target>
+      </trans-unit>
+      <trans-unit id="103" resname="msg_last_embed">
+        <source>Last embed: {1}</source>
+        <target>Dernier embedding : {1}</target>
+      </trans-unit>
+      <trans-unit id="104" resname="msg_enter_mandate">
+        <source>Please enter an Investment Thesis / Mandate.</source>
+        <target>Veuillez saisir une thèse d'investissement / un mandat.</target>
+      </trans-unit>
+      <trans-unit id="105" resname="msg_embed_failed">
+        <source>Failed to generate embedding for the mandate text.
+Check your AI provider settings.</source>
+        <target>Échec de la génération du vecteur pour le texte du mandat.
+Vérifiez la configuration de votre fournisseur IA.</target>
+      </trans-unit>
+      <trans-unit id="106" resname="msg_searching">
+        <source>Searching... Generating mandate embedding and computing vector distances.</source>
+        <target>Recherche en cours... Génération du vecteur du mandat et calcul des distances vectorielles.</target>
+      </trans-unit>
+      <trans-unit id="107" resname="msg_n_results">
+        <source>{1} results</source>
+        <target>{1} résultats</target>
+      </trans-unit>
+      <trans-unit id="108" resname="msg_search_complete">
+        <source>Search complete. {1} properties ranked by semantic match.</source>
+        <target>Recherche terminée. {1} biens classés par correspondance sémantique.</target>
+      </trans-unit>
+      <trans-unit id="109" resname="msg_loading_demo">
+        <source>Loading demo properties with embeddings... This may take a moment.</source>
+        <target>Chargement des biens de démo avec vecteurs... Cela peut prendre un moment.</target>
+      </trans-unit>
+      <trans-unit id="110" resname="msg_no_props_db">
+        <source>No properties in database. Load demo data first.</source>
+        <target>Aucun bien en base. Chargez d'abord les données de démo.</target>
+      </trans-unit>
+      <trans-unit id="111" resname="msg_confirm_regen">
+        <source>Regenerate all {1} embeddings using {2} / {3}?</source>
+        <target>Regénérer les {1} vecteurs avec {2} / {3} ?</target>
+      </trans-unit>
+      <trans-unit id="112" resname="msg_btn_regenerate">
+        <source>Regenerate</source>
+        <target>Regénérer</target>
+      </trans-unit>
+      <trans-unit id="113" resname="msg_btn_cancel">
+        <source>Cancel</source>
+        <target>Annuler</target>
+      </trans-unit>
+      <trans-unit id="114" resname="msg_demo_a_loaded">
+        <source>Demo A loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>Scénario A chargé. Cliquez sur « Lancer l'analyse sémantique » pour chercher.</target>
+      </trans-unit>
+      <trans-unit id="115" resname="msg_demo_b_loaded">
+        <source>Demo B loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>Scénario B chargé. Cliquez sur « Lancer l'analyse sémantique » pour chercher.</target>
+      </trans-unit>
+      <trans-unit id="116" resname="msg_demo_c_loaded">
+        <source>Scenario C loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>Scénario C chargé. Cliquez sur « Lancer l'analyse sémantique » pour chercher.</target>
+      </trans-unit>
+      <trans-unit id="117" resname="msg_demo_d_loaded">
+        <source>Scenario D loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>Scénario D chargé. Cliquez sur « Lancer l'analyse sémantique » pour chercher.</target>
+      </trans-unit>
+      <trans-unit id="118" resname="msg_generating_analysis">
+        <source>Generating semantic analysis...</source>
+        <target>Génération de l'analyse sémantique...</target>
+      </trans-unit>
+      <trans-unit id="119" resname="msg_props_loaded">
+        <source>{1} properties loaded. {2} embeddings generated.</source>
+        <target>{1} biens chargés. {2} vecteurs générés.</target>
+      </trans-unit>
+      <trans-unit id="120" resname="msg_embed_failures">
+        <source> ({1} embed failures)</source>
+        <target> ({1} échecs d'embedding)</target>
+      </trans-unit>
+      <trans-unit id="121" resname="msg_save_failures">
+        <source> ({1} save failures)</source>
+        <target> ({1} échecs de sauvegarde)</target>
+      </trans-unit>
+      <trans-unit id="122" resname="msg_loading_props">
+        <source>Loading properties... {1}/{2}</source>
+        <target>Chargement des biens... {1}/{2}</target>
+      </trans-unit>
+      <trans-unit id="123" resname="msg_no_props_regen">
+        <source>No properties to regenerate.</source>
+        <target>Aucun bien à regénérer.</target>
+      </trans-unit>
+      <trans-unit id="124" resname="msg_regen_progress">
+        <source>Regenerating embeddings... {1}/{2}</source>
+        <target>Regénération des vecteurs... {1}/{2}</target>
+      </trans-unit>
+      <trans-unit id="125" resname="msg_regen_done">
+        <source>Embeddings regenerated: {1}/{2} succeeded.</source>
+        <target>Vecteurs regénérés : {1}/{2} réussis.</target>
+      </trans-unit>
+      <trans-unit id="126" resname="msg_regen_failed">
+        <source> ({1} failed)</source>
+        <target> ({1} échoués)</target>
+      </trans-unit>
+      <trans-unit id="127" resname="msg_demo_not_found">
+        <source>demo_properties.json not found in Resources folder.</source>
+        <target>demo_properties.json introuvable dans le dossier Resources.</target>
+      </trans-unit>
+      <trans-unit id="128" resname="msg_demo_parse_fail">
+        <source>Failed to parse demo_properties.json.</source>
+        <target>Échec de l'analyse de demo_properties.json.</target>
+      </trans-unit>
+      <trans-unit id="130" resname="msg_server_not_config">
+        <source>Server '{1}' not configured in settings.json.</source>
+        <target>Serveur « {1} » non configuré dans settings.json.</target>
+      </trans-unit>
+      <trans-unit id="131" resname="msg_enter_api_key">
+        <source>Enter your OpenAI API key:</source>
+        <target>Entrez votre clé API OpenAI :</target>
+      </trans-unit>
+      <trans-unit id="132" resname="msg_api_key_required">
+        <source>OpenAI API key is required.</source>
+        <target>La clé API OpenAI est requise.</target>
+      </trans-unit>
+      <trans-unit id="133" resname="msg_embed_error">
+        <source>Embedding failed ({1} / {2})</source>
+        <target>Échec de l'embedding ({1} / {2})</target>
+      </trans-unit>
+      <trans-unit id="134" resname="msg_embed_null">
+        <source>Embedding call returned Null ({1} / {2}). Is the server running and the model loaded?</source>
+        <target>L'appel embedding a retourné Null ({1} / {2}). Le serveur est-il démarré et le modèle chargé ?</target>
+      </trans-unit>
+      <trans-unit id="135" resname="msg_detail_metrics">
+        <source>Region: {1}  |  Asset Type: {2}  |  Yield: {3}%  |  Price: ${4}  |  Size: {5} sqft  |  Built: {6}</source>
+        <target>Région : {1}  |  Type : {2}  |  Rdt : {3}%  |  Prix : {4} $  |  Surface : {5} m²  |  Année : {6}</target>
+      </trans-unit>
+      <trans-unit id="136" resname="msg_match_label">
+        <source> · Match: </source>
+        <target> · Corr. : </target>
+      </trans-unit>
+      <trans-unit id="137" resname="msg_enter_mandate_search">
+        <source>Please enter an Investment Thesis / Mandate to search.</source>
+        <target>Veuillez saisir une thèse d'investissement / un mandat pour rechercher.</target>
+      </trans-unit>
+
+      <!-- ==================== AIConfig Code Messages ==================== -->
+      <trans-unit id="200" resname="msg_ac_load_models">
+        <source>Load models from each server, then select the desired ones.</source>
+        <target>Chargez les modèles de chaque serveur, puis sélectionnez ceux souhaités.</target>
+      </trans-unit>
+      <trans-unit id="201" resname="msg_ac_server_not_config">
+        <source>Server '{1}' not configured.</source>
+        <target>Serveur « {1} » non configuré.</target>
+      </trans-unit>
+      <trans-unit id="202" resname="msg_ac_no_api_key">
+        <source>OpenAI API key not set. Click 'Set Key...' first.</source>
+        <target>Clé API OpenAI non définie. Cliquez d'abord sur « Définir... ».</target>
+      </trans-unit>
+      <trans-unit id="203" resname="msg_ac_loading_models">
+        <source>Loading models from {1}...</source>
+        <target>Chargement des modèles depuis {1}...</target>
+      </trans-unit>
+      <trans-unit id="204" resname="msg_ac_models_loaded">
+        <source>{1} models loaded from {2}.</source>
+        <target>{1} modèles chargés depuis {2}.</target>
+      </trans-unit>
+      <trans-unit id="205" resname="msg_ac_refreshing">
+        <source>Refreshing models from {1}...</source>
+        <target>Actualisation des modèles depuis {1}...</target>
+      </trans-unit>
+      <trans-unit id="206" resname="msg_ac_api_saved">
+        <source>OpenAI API key saved.</source>
+        <target>Clé API OpenAI enregistrée.</target>
+      </trans-unit>
+      <trans-unit id="207" resname="msg_ac_config_saved_note">
+        <source>Configuration saved. Note: if embedding model changed, consider regenerating embeddings from the main screen.</source>
+        <target>Configuration enregistrée. Note : si le modèle d'embedding a changé, pensez à regénérer les vecteurs depuis l'écran principal.</target>
+      </trans-unit>
+      <trans-unit id="208" resname="msg_ac_config_saved">
+        <source>Configuration saved.</source>
+        <target>Configuration enregistrée.</target>
+      </trans-unit>
+      <trans-unit id="209" resname="msg_ac_key_set">
+        <source>API key is set ({1}...)</source>
+        <target>Clé API définie ({1}...)</target>
+      </trans-unit>
+      <trans-unit id="210" resname="msg_ac_no_key">
+        <source>No API key configured</source>
+        <target>Aucune clé API configurée</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

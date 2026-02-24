@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="4D-real-restate-AI" uuid="F7ED097FBA674FC8A55B9FEFAC5A0ABE" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Properties" uuid="A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6" id="1">
+		<field name="ID" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B1" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="propertyName" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B2" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="region" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B3" type="10" limiting_length="100" never_null="true" id="3"/>
+		<field name="assetType" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B4" type="10" limiting_length="100" never_null="true" id="4"/>
+		<field name="askingYield" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B5" type="6" never_null="true" id="5"/>
+		<field name="description" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B6" type="10" never_null="true" id="6"/>
+		<field name="askingPrice" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B7" type="6" never_null="true" id="7"/>
+		<field name="sqft" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B8" type="4" never_null="true" id="8"/>
+		<field name="yearBuilt" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B9" type="4" never_null="true" id="9"/>
+		<field name="vectorDesc" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5BA" type="21" blob_switch_size="2147483647" id="10">
+			<field_extra class_id="4D.Vector"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B1"/>
+	</table>
+	<table name="SearchHistory" uuid="B1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D7" id="2">
+		<field name="ID" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B1" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="mandateText" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B2" type="10" never_null="true" id="2"/>
+		<field name="filterRegion" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B3" type="10" limiting_length="100" never_null="true" id="3"/>
+		<field name="filterAssetType" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B4" type="10" limiting_length="100" never_null="true" id="4"/>
+		<field name="filterMinYield" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B5" type="6" never_null="true" id="5"/>
+		<field name="searchDate" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B6" type="8" never_null="true" id="6"/>
+		<field name="resultCount" uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B7" type="4" never_null="true" id="7"/>
+		<primary_key field_name="ID" field_uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B1"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="C3D5F7A9B1E2F4A6C8D0E1F3A5B7C9D1" type="7">
+		<field_ref uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B1" name="ID">
+			<table_ref uuid="A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6" name="Properties"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C3D5F7A9B1E2F4A6C8D0E1F3A5B7C9D2" type="7">
+		<field_ref uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B3" name="region">
+			<table_ref uuid="A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6" name="Properties"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C3D5F7A9B1E2F4A6C8D0E1F3A5B7C9D3" type="7">
+		<field_ref uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B4" name="assetType">
+			<table_ref uuid="A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6" name="Properties"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="C3D5F7A9B1E2F4A6C8D0E1F3A5B7C9D4" type="7">
+		<field_ref uuid="E2B4F6A8C0D1E3F5A7B9C2D4E6F8A0B1" name="ID">
+			<table_ref uuid="B1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D7" name="SearchHistory"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

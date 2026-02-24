@@ -1,0 +1,652 @@
+[
+	{
+		"propertyName": "Meridian Logistics Hub",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 6.2,
+		"askingPrice": 28500000,
+		"sqft": 185000,
+		"yearBuilt": 2019,
+		"description": "Class-A distribution center with LEED Platinum certification, 1MW photovoltaic roof array, 40-foot clear heights, cross-dock configuration with 80 trailer positions, EV charging stations for fleet vehicles, and automated conveyor sortation system."
+	},
+	{
+		"propertyName": "Passive-Haus Tower One",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 4.8,
+		"askingPrice": 62000000,
+		"sqft": 210000,
+		"yearBuilt": 2021,
+		"description": "Passive-house certified workspace with triple-glazed curtain wall, fiber-optic backbone, integrated heat-recovery ventilation, rooftop urban farm, rainwater harvesting cistern, and occupancy-sensing LED arrays throughout. Wired Score Platinum rated."
+	},
+	{
+		"propertyName": "Riverside Commons",
+		"region": "North America",
+		"assetType": "Office",
+		"askingYield": 5.1,
+		"askingPrice": 45000000,
+		"sqft": 175000,
+		"yearBuilt": 2015,
+		"description": "Multi-tenant creative office campus with exposed brick and timber aesthetic, ground-floor coworking incubator, 200-stall bike storage, on-site cafeteria with farm-to-table program, and direct light-rail transit access. 92% occupied with tech tenants."
+	},
+	{
+		"propertyName": "CBD Metro Tower",
+		"region": "North America",
+		"assetType": "Office",
+		"askingYield": 7.9,
+		"askingPrice": 31000000,
+		"sqft": 160000,
+		"yearBuilt": 1988,
+		"description": "Under-managed mid-rise in CBD requiring cosmetic renovation. Current occupancy at 58%. Building systems functional but dated — original HVAC and elevator cabs. Strong floor plates with excellent natural light. Adjacent to new transit hub under construction."
+	},
+	{
+		"propertyName": "Aurora Retail Galleria",
+		"region": "Europe",
+		"assetType": "Retail",
+		"askingYield": 5.5,
+		"askingPrice": 89000000,
+		"sqft": 320000,
+		"yearBuilt": 2008,
+		"description": "Dominant regional enclosed mall anchored by two department stores and a 14-screen cinema. Recent food-hall installation with experiential dining. Adjacent 800-space structured parking garage with EV fast-charger stations. Triple-net lease structure."
+	},
+	{
+		"propertyName": "Greenfield Data Campus",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 5.0,
+		"askingPrice": 120000000,
+		"sqft": 95000,
+		"yearBuilt": 2022,
+		"description": "Hyperscale-ready facility with 40MW utility feed, N+1 redundant cooling loops, raised-floor server halls, on-site diesel rotary UPS, and fiber path diversity from three separate carriers. PUE target of 1.15 with liquid cooling readiness."
+	},
+	{
+		"propertyName": "Harbor Point Apartments",
+		"region": "North America",
+		"assetType": "Multifamily",
+		"askingYield": 4.5,
+		"askingPrice": 52000000,
+		"sqft": 240000,
+		"yearBuilt": 2020,
+		"description": "280-unit luxury waterfront community with resort-style amenity deck, infinity pool, WeWork-branded coworking lounge, pet spa, package lockers, and 350-space podium parking. Units feature quartz counters, smart-home IoT suite, and in-unit washer/dryer."
+	},
+	{
+		"propertyName": "Solstice Warehouse Park",
+		"region": "Asia Pacific",
+		"assetType": "Industrial",
+		"askingYield": 6.8,
+		"askingPrice": 18000000,
+		"sqft": 150000,
+		"yearBuilt": 2017,
+		"description": "EV-ready logistics hub with 25kW rooftop solar arrays, dock-high and grade-level loading, ESFR sprinkler system, LED high-bay lighting with motion sensors. Located within designated free-trade zone with customs pre-clearance facility."
+	},
+	{
+		"propertyName": "Kingsway Medical Centre",
+		"region": "Europe",
+		"assetType": "Healthcare",
+		"askingYield": 5.2,
+		"askingPrice": 37000000,
+		"sqft": 88000,
+		"yearBuilt": 2016,
+		"description": "Purpose-built ambulatory care facility with shielded radiology suites, negative-pressure isolation rooms, medical gas infrastructure, and rooftop helipad. Anchored by regional health network on 15-year absolute NNN lease with 2.5% annual escalations."
+	},
+	{
+		"propertyName": "Zenith Cold Storage",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 7.1,
+		"askingPrice": 24000000,
+		"sqft": 110000,
+		"yearBuilt": 2018,
+		"description": "Temperature-controlled warehouse with multi-zone blast freezers (-20°F to 38°F), ammonia refrigeration plant, USDA-inspected processing room, dock seals with refrigerated vestibules, and FDA-compliant HACCP food-safety protocols."
+	},
+	{
+		"propertyName": "Quartier Libre Mixed-Use",
+		"region": "Europe",
+		"assetType": "Mixed-Use",
+		"askingYield": 4.9,
+		"askingPrice": 73000000,
+		"sqft": 195000,
+		"yearBuilt": 2020,
+		"description": "Vertically integrated live-work-play development: ground-floor artisan retail, floors 2-5 coworking / flex-office, floors 6-14 residential apartments. Rooftop terrace bar with panoramic views. BREEAM Outstanding sustainability rating."
+	},
+	{
+		"propertyName": "Prairie Wind Solar Farm Lease",
+		"region": "North America",
+		"assetType": "Land",
+		"askingYield": 8.5,
+		"askingPrice": 6500000,
+		"sqft": 4356000,
+		"yearBuilt": 2021,
+		"description": "100-acre ground-mounted photovoltaic installation secured by 25-year power purchase agreement with investment-grade utility off-taker. Bifacial panels on single-axis trackers, capacity 15MWdc, interconnected to regional transmission grid."
+	},
+	{
+		"propertyName": "Lakeshore Senior Living",
+		"region": "North America",
+		"assetType": "Healthcare",
+		"askingYield": 6.0,
+		"askingPrice": 29000000,
+		"sqft": 125000,
+		"yearBuilt": 2014,
+		"description": "150-bed assisted-living and memory-care community with certified dementia-care program, hydrotherapy suite, sensory garden, on-site pharmacy, and commercial kitchen. Stabilized occupancy of 94% with long waiting list."
+	},
+	{
+		"propertyName": "The Foundry Lofts",
+		"region": "North America",
+		"assetType": "Multifamily",
+		"askingYield": 7.4,
+		"askingPrice": 14500000,
+		"sqft": 68000,
+		"yearBuilt": 1925,
+		"description": "Adaptive-reuse historic foundry converted to 54 loft-style apartments. Exposed brick, 14-foot ceilings, original steel trusses. Opportunity-zone qualified. Current rents 20% below market with upside through unit renovation and amenity addition."
+	},
+	{
+		"propertyName": "TechPark Suzhou",
+		"region": "Asia Pacific",
+		"assetType": "Office",
+		"askingYield": 5.8,
+		"askingPrice": 41000000,
+		"sqft": 200000,
+		"yearBuilt": 2019,
+		"description": "R&D campus in Suzhou Industrial Park with clean-room suites, vibration-isolated lab floors, 100% fresh-air HVAC, generator-backed power, and on-campus employee dormitory. Tenanted by semiconductor and biotech firms on long-term leases."
+	},
+	{
+		"propertyName": "Piazza del Sole Retail",
+		"region": "Europe",
+		"assetType": "Retail",
+		"askingYield": 4.2,
+		"askingPrice": 55000000,
+		"sqft": 98000,
+		"yearBuilt": 2005,
+		"description": "High-street luxury retail parade anchored by flagship designer boutiques. Pedestrianized piazza with outdoor café seating. Heritage-listed limestone façade with modern MEP refit. Tourist foot traffic exceeds 30,000 visitors per day."
+	},
+	{
+		"propertyName": "Cascadia Bioscience Centre",
+		"region": "North America",
+		"assetType": "Life Sciences",
+		"askingYield": 4.6,
+		"askingPrice": 78000000,
+		"sqft": 130000,
+		"yearBuilt": 2022,
+		"description": "BSL-2 and BSL-3 containment labs, vivarium, glass-wash and autoclave core, chemical fume hoods, 100% outside-air HVAC with HEPA filtration, emergency shower eyewash stations. Campus includes shared conference center and cafeteria."
+	},
+	{
+		"propertyName": "Terminal Road Truck Depot",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 8.2,
+		"askingPrice": 9500000,
+		"sqft": 42000,
+		"yearBuilt": 2001,
+		"description": "Last-mile cross-dock with 30 dock doors, driver staging area, CNG fueling island, and paved trailer yard for 60 units. Strategic location 2 miles from intermodal rail terminal. Leased to national parcel carrier at above-market rent."
+	},
+	{
+		"propertyName": "Shoreham Student Village",
+		"region": "Europe",
+		"assetType": "Multifamily",
+		"askingYield": 5.6,
+		"askingPrice": 47000000,
+		"sqft": 180000,
+		"yearBuilt": 2018,
+		"description": "650-bed purpose-built student accommodation adjacent to Russell Group university. En-suite cluster flats with communal kitchens, 24/7 reception, cinema room, gym, and laundry. Direct-let model with 98% occupancy and index-linked rental growth."
+	},
+	{
+		"propertyName": "Red Bluff Self-Storage",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 6.5,
+		"askingPrice": 11000000,
+		"sqft": 82000,
+		"yearBuilt": 2016,
+		"description": "Climate-controlled self-storage facility with 650 units, keypad gated access, 24-hour video surveillance, tenant insurance program, and online rental portal. Operating at 91% physical occupancy with 4% annual revenue growth."
+	},
+	{
+		"propertyName": "Atlas Fulfillment Center",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 5.3,
+		"askingPrice": 67000000,
+		"sqft": 450000,
+		"yearBuilt": 2021,
+		"description": "State-of-the-art e-commerce fulfillment center with mezzanine pick modules, robotic goods-to-person stations, 36-foot clear heights, build-to-suit for Fortune 500 retailer with 10-year NNN lease. Solar canopy covering 80% of parking."
+	},
+	{
+		"propertyName": "Old Town Heritage Hotel",
+		"region": "Europe",
+		"assetType": "Hospitality",
+		"askingYield": 3.8,
+		"askingPrice": 42000000,
+		"sqft": 65000,
+		"yearBuilt": 1890,
+		"description": "120-key boutique heritage hotel in UNESCO World Heritage zone. Recent €8M soft-goods renovation. Michelin-recommended restaurant, rooftop cocktail bar, and 12-room spa. RevPAR consistently above market. Management agreement with luxury brand."
+	},
+	{
+		"propertyName": "Bayview Marina Village",
+		"region": "North America",
+		"assetType": "Mixed-Use",
+		"askingYield": 5.0,
+		"askingPrice": 38000000,
+		"sqft": 145000,
+		"yearBuilt": 2017,
+		"description": "Waterfront mixed-use with ground-floor seafood market, casual dining, marine chandlery, second-floor professional offices, and 60 residential condos on upper floors. Private docking slips for 40 boats. HOA-managed with reserve fund."
+	},
+	{
+		"propertyName": "Gateway Intermodal Park",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 6.4,
+		"askingPrice": 95000000,
+		"sqft": 720000,
+		"yearBuilt": 2020,
+		"description": "Multi-building logistics park directly adjacent to Class I railroad intermodal terminal. Buildings feature 40-foot clear heights, ESFR sprinklers, T-5 lighting, and shared stormwater detention. Foreign Trade Zone designation available."
+	},
+	{
+		"propertyName": "Silverleaf Medical Office",
+		"region": "North America",
+		"assetType": "Healthcare",
+		"askingYield": 5.7,
+		"askingPrice": 19500000,
+		"sqft": 62000,
+		"yearBuilt": 2013,
+		"description": "Two-story medical office building adjacent to 400-bed acute-care hospital. Tenants include orthopedic surgery group, imaging center, and outpatient physical therapy clinic. 100% leased with 6.2-year WALT and contractual rent bumps."
+	},
+	{
+		"propertyName": "Nordic Wind Logistics",
+		"region": "Europe",
+		"assetType": "Industrial",
+		"askingYield": 5.9,
+		"askingPrice": 33000000,
+		"sqft": 220000,
+		"yearBuilt": 2020,
+		"description": "Net-zero-carbon warehouse powered entirely by adjacent offshore wind farm PPA. Geothermal slab heating, rainwater greywater recycling, biodiversity green roof, and electric forklift charging infrastructure. BREEAM Excellent certification."
+	},
+	{
+		"propertyName": "Central Station Retail Podium",
+		"region": "Asia Pacific",
+		"assetType": "Retail",
+		"askingYield": 4.7,
+		"askingPrice": 110000000,
+		"sqft": 260000,
+		"yearBuilt": 2019,
+		"description": "Transit-oriented retail podium integrated with metro station serving 200,000 daily commuters. Tenants include international fast fashion, F&B operators, and a full-line grocer. Turnover rent clauses provide upside participation."
+	},
+	{
+		"propertyName": "Cypress Grove Apartments",
+		"region": "North America",
+		"assetType": "Multifamily",
+		"askingYield": 4.3,
+		"askingPrice": 85000000,
+		"sqft": 350000,
+		"yearBuilt": 2022,
+		"description": "420-unit Class-A garden-style community with saltwater pool, dog park, outdoor kitchen pavilion, co-working library, and EV charging stations. Units feature 9-foot ceilings, luxury vinyl plank floors, and smart thermostat controls. 96% occupied."
+	},
+	{
+		"propertyName": "Eagle Rock Data Vault",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 4.8,
+		"askingPrice": 155000000,
+		"sqft": 120000,
+		"yearBuilt": 2023,
+		"description": "Tier IV colocation facility with 2N power topology, 50MW campus capacity, on-site substation, 72-hour fuel storage, seismically isolated raised floors, and biometric man-trap entry. Carrier-neutral meet-me room with 15+ network providers."
+	},
+	{
+		"propertyName": "Montmartre Creative Quarter",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 3.9,
+		"askingPrice": 25000000,
+		"sqft": 48000,
+		"yearBuilt": 2016,
+		"description": "Converted former printworks housing creative agencies and digital studios. Exposed steel structure, polished concrete floors, internal courtyard garden, rooftop event terrace, and artist-in-residence ground-floor gallery space."
+	},
+	{
+		"propertyName": "Lone Star Distribution",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 7.0,
+		"askingPrice": 16000000,
+		"sqft": 135000,
+		"yearBuilt": 2010,
+		"description": "Rear-load distribution warehouse in emerging industrial corridor. Concrete tilt-up construction, 32-foot clear, 12 dock doors, 2 drive-in ramps. Fully leased to regional third-party logistics provider. Below-replacement-cost basis."
+	},
+	{
+		"propertyName": "Sakura Tower Residences",
+		"region": "Asia Pacific",
+		"assetType": "Multifamily",
+		"askingYield": 3.5,
+		"askingPrice": 130000000,
+		"sqft": 280000,
+		"yearBuilt": 2021,
+		"description": "42-story luxury residential tower with concierge, sky lounge on 40th floor, outdoor zen garden, children's play area, and underground automated parking. Units feature floor-to-ceiling windows, Miele appliances, and marble bathrooms."
+	},
+	{
+		"propertyName": "Prairie Harvest Co-op",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 9.1,
+		"askingPrice": 7200000,
+		"sqft": 200000,
+		"yearBuilt": 1995,
+		"description": "Grain elevator and bulk commodity storage with rail siding, truck-scale weighbridge, 4 million bushel capacity, aeration fans, and fumigation system. Long-term lease to agricultural cooperative with CPI-linked rent adjustments."
+	},
+	{
+		"propertyName": "The Canopy Hotel & Conference",
+		"region": "North America",
+		"assetType": "Hospitality",
+		"askingYield": 5.4,
+		"askingPrice": 58000000,
+		"sqft": 190000,
+		"yearBuilt": 2018,
+		"description": "300-key select-service hotel adjacent to convention center. 15,000 SF divisible ballroom, business center, indoor pool and fitness center. Franchise agreement with top-5 global hotel brand. NOI stabilized post-COVID with corporate travel rebound."
+	},
+	{
+		"propertyName": "Rhine Valley Vineyard Estate",
+		"region": "Europe",
+		"assetType": "Land",
+		"askingYield": 2.8,
+		"askingPrice": 12000000,
+		"sqft": 2178000,
+		"yearBuilt": 2000,
+		"description": "50-hectare estate with 35 hectares of AOC-classified Riesling vineyards, gravity-flow winery, barrel cellar, tasting room, and 8-bedroom guesthouse. Established direct-to-consumer wine club with 3,000 members."
+	},
+	{
+		"propertyName": "Quantum Life Sciences Campus",
+		"region": "North America",
+		"assetType": "Life Sciences",
+		"askingYield": 4.2,
+		"askingPrice": 145000000,
+		"sqft": 220000,
+		"yearBuilt": 2023,
+		"description": "Purpose-built wet-lab and dry-lab campus with cGMP manufacturing suite, API synthesis clean rooms, cold-chain validated storage, and penthouse mechanical floor. Anchored by two public biotech companies on 12-year leases."
+	},
+	{
+		"propertyName": "Metro West Transit Village",
+		"region": "North America",
+		"assetType": "Mixed-Use",
+		"askingYield": 4.6,
+		"askingPrice": 92000000,
+		"sqft": 310000,
+		"yearBuilt": 2021,
+		"description": "Transit-oriented development above commuter rail station. 250 apartments, 30,000 SF grocery-anchored retail, 10,000 SF daycare, structured parking with 50 EV stalls. LEED Gold certified with green roof and bioswale stormwater management."
+	},
+	{
+		"propertyName": "Ironworks Innovation Hub",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 6.3,
+		"askingPrice": 21000000,
+		"sqft": 72000,
+		"yearBuilt": 2017,
+		"description": "Repurposed ironworks with flexible floorplates suited for scale-up tech firms. On-site prototyping workshop with CNC equipment, 3D printing lab, maker space, and event amphitheater. Government enterprise-zone tax incentives available."
+	},
+	{
+		"propertyName": "Pacific Rim Cold Chain",
+		"region": "Asia Pacific",
+		"assetType": "Industrial",
+		"askingYield": 6.7,
+		"askingPrice": 35000000,
+		"sqft": 160000,
+		"yearBuilt": 2020,
+		"description": "Multi-temperature cold-chain facility near deep-water port with blast freezing, chilled docks, dry ambient staging, and automated pallet shuttle ASRS. Serves seafood export and pharmaceutical cold-storage clients on medium-term leases."
+	},
+	{
+		"propertyName": "Orchard Hill Senior Campus",
+		"region": "North America",
+		"assetType": "Healthcare",
+		"askingYield": 5.9,
+		"askingPrice": 44000000,
+		"sqft": 165000,
+		"yearBuilt": 2015,
+		"description": "Continuing-care retirement community with independent-living cottages, assisted-living suites, and skilled-nursing wing. On-site rehabilitation gym, chapel, beauty salon, and putting green. Operated by regional non-profit with 50-year track record."
+	},
+	{
+		"propertyName": "SkyPort Urban Air Terminal",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 3.2,
+		"askingPrice": 22000000,
+		"sqft": 15000,
+		"yearBuilt": 2024,
+		"description": "First-of-its-kind vertiport designed for eVTOL air-taxi operations. Four landing pads, passenger lounge, battery swap station, and integrated rideshare drop-off. Long-term ground lease with municipal aviation authority."
+	},
+	{
+		"propertyName": "Brunswick Square Centre",
+		"region": "Europe",
+		"assetType": "Retail",
+		"askingYield": 7.5,
+		"askingPrice": 18000000,
+		"sqft": 105000,
+		"yearBuilt": 1992,
+		"description": "Value-add enclosed shopping center with 62% occupancy. Anchor vacancy presents re-tenanting or redevelopment potential. Recent structural survey confirms sound building envelope. Adjacent council-approved residential zoning creates mixed-use conversion opportunity."
+	},
+	{
+		"propertyName": "Alpine Lodge Resort",
+		"region": "Europe",
+		"assetType": "Hospitality",
+		"askingYield": 4.1,
+		"askingPrice": 36000000,
+		"sqft": 85000,
+		"yearBuilt": 2012,
+		"description": "80-key mountain resort with ski-in/ski-out access, heated outdoor infinity pool, 6,000 SF destination spa, two restaurants, and helipad. Strong winter and summer seasonality with year-round adventure tourism programming."
+	},
+	{
+		"propertyName": "Elm Street Affordable Housing",
+		"region": "North America",
+		"assetType": "Multifamily",
+		"askingYield": 5.8,
+		"askingPrice": 23000000,
+		"sqft": 142000,
+		"yearBuilt": 2009,
+		"description": "180-unit LIHTC affordable housing community with Section 8 HAP contract. Brick exterior, pitched roofs, on-site management office, playground, and community room. Year-15 approaching with mark-to-market rent reset opportunity."
+	},
+	{
+		"propertyName": "Nebula Cloud Campus",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 4.0,
+		"askingPrice": 210000000,
+		"sqft": 250000,
+		"yearBuilt": 2024,
+		"description": "Next-generation AI-optimized data center with liquid-immersion cooling, 100MW grid connection, dedicated renewable energy microgrid with on-site battery storage, and zero-water-consumption cooling towers. Pre-leased to hyperscale cloud operator."
+	},
+	{
+		"propertyName": "Harbour Wharf Studios",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 5.3,
+		"askingPrice": 32000000,
+		"sqft": 78000,
+		"yearBuilt": 2019,
+		"description": "Converted dockside warehouse housing media and film production studios, post-production editing suites, sound stages, green-screen cyclorama wall, and open-plan creative offices. Adjacent canal with outdoor filming locations."
+	},
+	{
+		"propertyName": "Great Plains Wind Farm Lease",
+		"region": "North America",
+		"assetType": "Land",
+		"askingYield": 7.8,
+		"askingPrice": 4800000,
+		"sqft": 8712000,
+		"yearBuilt": 2018,
+		"description": "200-acre wind energy lease with 12 operational turbines rated at 36MW aggregate capacity. Fixed-escalation revenue from utility PPA expiring 2043. Minimal landlord obligations — turbine O&M handled by operator under separate agreement."
+	},
+	{
+		"propertyName": "Valencia Fresh Market",
+		"region": "Europe",
+		"assetType": "Retail",
+		"askingYield": 4.9,
+		"askingPrice": 15000000,
+		"sqft": 45000,
+		"yearBuilt": 2017,
+		"description": "Gourmet food hall with 28 artisan vendor stalls, central oyster bar, demonstration kitchen, wine cave, and covered outdoor terrace. Located in renovated municipal market building with landmark architectural status."
+	},
+	{
+		"propertyName": "Millbrook Flex-Space Park",
+		"region": "North America",
+		"assetType": "Industrial",
+		"askingYield": 6.9,
+		"askingPrice": 27000000,
+		"sqft": 175000,
+		"yearBuilt": 2014,
+		"description": "Five-building flex-industrial park with mix of R&D, light manufacturing, and showroom tenants. Each building features 20% office finish, 24-foot clear warehouse, and private fenced yards. 88% occupied with staggered lease expirations."
+	},
+	{
+		"propertyName": "Coral Bay Resort & Residences",
+		"region": "Asia Pacific",
+		"assetType": "Hospitality",
+		"askingYield": 3.6,
+		"askingPrice": 75000000,
+		"sqft": 140000,
+		"yearBuilt": 2020,
+		"description": "Beachfront luxury resort with 200 keys, 40 branded residences, overwater villas, 3 specialty restaurants, dive center, and 18-hole golf course. Managed by international five-star operator with robust RevPAR premium."
+	},
+	{
+		"propertyName": "Entrepôt Seine-Aval Logistique",
+		"region": "Europe",
+		"assetType": "Industrial",
+		"askingYield": 5.8,
+		"askingPrice": 22000000,
+		"sqft": 160000,
+		"yearBuilt": 2022,
+		"description": "Plateforme logistique du dernier kilomètre certifiée BREEAM Excellent, située en première couronne parisienne. Hauteur libre 12 mètres, 60 quais poids lourds, bornes de recharge pour flottes électriques, panneaux photovoltaïques en toiture couvrant 40% de la consommation énergétique. Embranchement ferroviaire opérationnel et accès direct à l'A86."
+	},
+	{
+		"propertyName": "Tour Lumière — La Défense",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 4.2,
+		"askingPrice": 95000000,
+		"sqft": 280000,
+		"yearBuilt": 2018,
+		"description": "Immeuble de bureaux prime IGH de 32 étages à La Défense, restructuré en 2018 aux normes HQE et WELL Gold. Espaces flexibles avec plateaux divisibles de 800 m², triple vitrage à contrôle solaire, terrasses végétalisées tous les 5 niveaux, conciergerie et salle de sport en RDC. Desserte directe RER A et tramway T2."
+	},
+	{
+		"propertyName": "Parc d'Activités Aéroport Lyon-Est",
+		"region": "Europe",
+		"assetType": "Industrial",
+		"askingYield": 6.5,
+		"askingPrice": 18000000,
+		"sqft": 130000,
+		"yearBuilt": 2020,
+		"description": "Ensemble logistique multi-cellules en zone franche aéroportuaire de Lyon Saint-Exupéry. Certification environnementale RT2020, système de gestion des eaux pluviales, accès direct A432, aire de stationnement 120 PL. Idéal opérateurs e-commerce ou transitaires internationaux. Bail ferme 9 ans en cours."
+	},
+	{
+		"propertyName": "Résidence Les Jardins d'Arcadie — Bordeaux",
+		"region": "Europe",
+		"assetType": "Multifamily",
+		"askingYield": 3.9,
+		"askingPrice": 32000000,
+		"sqft": 95000,
+		"yearBuilt": 2021,
+		"description": "Résidence de services pour seniors de 120 appartements meublés avec prestations hôtelières, restaurant, salon de coiffure, espace bien-être et jardin paysager. Située à 10 minutes du centre de Bordeaux, à proximité immédiate du tramway ligne C. Taux d'occupation moyen de 95%, bail commercial sécurisé de 11 ans."
+	},
+	{
+		"propertyName": "Centre Commercial Riviera Confluence",
+		"region": "Europe",
+		"assetType": "Retail",
+		"askingYield": 5.5,
+		"askingPrice": 48000000,
+		"sqft": 200000,
+		"yearBuilt": 2016,
+		"description": "Centre commercial de 18 500 m² GLA en quartier Confluence à Lyon, locomotive alimentaire Monoprix, 45 boutiques dont enseigne nationale mode et restauration, multiplexe cinéma de 8 salles en étage. Programme de rénovation des parties communes en cours orienté expérience client et digitalisation des parcours. Fréquentation annuelle 3,2 millions de visiteurs."
+	},
+	{
+		"propertyName": "Hub Multimodal Marseille-Fos",
+		"region": "Europe",
+		"assetType": "Industrial",
+		"askingYield": 7.1,
+		"askingPrice": 15000000,
+		"sqft": 110000,
+		"yearBuilt": 2019,
+		"description": "Entrepôt frigorifique et sec double température sur le port de Fos-sur-Mer, raccordé au réseau ferré national. Certifié IFS Logistics, quai roll-on/roll-off, zone de cross-docking de 2 000 m². Idéal pour chaîne d'approvisionnement agroalimentaire méditerranéenne. Contrat d'exploitation GNL pour engins de manutention."
+	},
+	{
+		"propertyName": "Campus Santé Nantes-Atlantique",
+		"region": "Europe",
+		"assetType": "Healthcare",
+		"askingYield": 4.5,
+		"askingPrice": 38000000,
+		"sqft": 140000,
+		"yearBuilt": 2021,
+		"description": "Pôle de santé pluridisciplinaire regroupant clinique ambulatoire, centre d'imagerie médicale IRM/scanner, laboratoire d'analyses et maison de santé de 25 praticiens. Bâtiment passif à énergie positive certifié E3C2, parking souterrain 200 places, hélistation. Adossé au CHU de Nantes, zone de chalandise de 500 000 habitants."
+	},
+	{
+		"propertyName": "Hôtel Jardin des Tuileries — Paris 1er",
+		"region": "Europe",
+		"assetType": "Hospitality",
+		"askingYield": 3.2,
+		"askingPrice": 85000000,
+		"sqft": 60000,
+		"yearBuilt": 1890,
+		"description": "Hôtel particulier haussmannien de 80 chambres et suites classé 5 étoiles, rénové en 2020 avec spa, restaurant gastronomique étoilé, bar rooftop avec vue sur la Seine et le Louvre. Clientèle internationale haut de gamme, RevPAR supérieur de 30% au marché parisien. Monument historique inscrit, avantages fiscaux Malraux."
+	},
+	{
+		"propertyName": "Immeuble Mixte République — Lille",
+		"region": "Europe",
+		"assetType": "Mixed-Use",
+		"askingYield": 5.0,
+		"askingPrice": 26000000,
+		"sqft": 105000,
+		"yearBuilt": 2017,
+		"description": "Immeuble mixte commerce et bureaux en hyper-centre de Lille, face à la Grand'Place. RDC et R+1 occupés par enseignes nationales (baux 3/6/9 en cours), étages R+2 à R+6 en bureaux aménagés avec espaces collaboratifs et terrasse. Certification NF HQE Bâtiment Tertiaire, fibre optique dédiée, 50 places de parking en sous-sol."
+	},
+	{
+		"propertyName": "Terrain Stratégique ZAC Euratlantique — Bordeaux",
+		"region": "Europe",
+		"assetType": "Land",
+		"askingYield": 0.0,
+		"askingPrice": 12000000,
+		"sqft": 55000,
+		"yearBuilt": 0,
+		"description": "Terrain à bâtir de 5 100 m² en ZAC Euratlantique, opération d'intérêt national. Constructibilité résidentielle et tertiaire, COS favorable, raccordement réseaux en limite. Proximité immédiate gare Saint-Jean (TGV Paris 2h05), desserte tramway et BHNS. Potentiel de 15 000 m² de SHON, livraison 2027."
+	},
+	{
+		"propertyName": "Résidence Étudiante Le Clos Universitaire — Toulouse",
+		"region": "Europe",
+		"assetType": "Multifamily",
+		"askingYield": 4.8,
+		"askingPrice": 14000000,
+		"sqft": 45000,
+		"yearBuilt": 2022,
+		"description": "Résidence étudiante de 180 studios meublés à proximité du campus de Rangueil et de l'INSA Toulouse. Salle de sport, espace coworking, local vélos sécurisé, laverie connectée. Certifiée RT2020, gestion par exploitant spécialisé avec bail commercial 12 ans. Taux de remplissage historique 98%, zone tendue éligible Pinel."
+	},
+	{
+		"propertyName": "Data Center Tier III — Strasbourg",
+		"region": "Europe",
+		"assetType": "Industrial",
+		"askingYield": 5.2,
+		"askingPrice": 42000000,
+		"sqft": 50000,
+		"yearBuilt": 2021,
+		"description": "Centre de données Tier III certifié ISO 27001, capacité 3 MW IT, refroidissement adiabatique free-cooling 80% de l'année grâce au climat alsacien. Double alimentation électrique EDF et groupe diesel N+1, réseau fibre interconnecté aux principaux IX européens (DE-CIX, France-IX). Bail triple-net avec opérateur cloud hyperscale, durée résiduelle 8 ans."
+	},
+	{
+		"propertyName": "Vignoble & Domaine Châteauneuf — Provence",
+		"region": "Europe",
+		"assetType": "Land",
+		"askingYield": 2.5,
+		"askingPrice": 9000000,
+		"sqft": 320000,
+		"yearBuilt": 1780,
+		"description": "Domaine viticole AOP Châteauneuf-du-Pape de 30 hectares en production biologique, cave de vinification gravitaire récente, chai à barriques climatisé, gîtes et salle de réception pour oenotourisme. Production annuelle 80 000 bouteilles, export 60%. Potentiel d'agritourisme et hébergement haut de gamme, classement « Vignobles & Découvertes »."
+	},
+	{
+		"propertyName": "Clinique Vétérinaire Technopôle — Grenoble",
+		"region": "Europe",
+		"assetType": "Healthcare",
+		"askingYield": 5.8,
+		"askingPrice": 5500000,
+		"sqft": 18000,
+		"yearBuilt": 2020,
+		"description": "Clinique vétérinaire de référence avec bloc opératoire, scanner, IRM dédié et service d'urgences 24h/24. Équipe de 12 vétérinaires spécialistes, zone de chalandise de 300 000 habitants. Bâtiment neuf aux normes accessibilité, parking 40 places, bail 3/6/9 avec locataire en place depuis l'ouverture. Rentabilité nette supérieure au marché immobilier de santé classique."
+	},
+	{
+		"propertyName": "Bureaux Co-Living Gare de Lyon — Paris 12e",
+		"region": "Europe",
+		"assetType": "Office",
+		"askingYield": 4.0,
+		"askingPrice": 28000000,
+		"sqft": 75000,
+		"yearBuilt": 2023,
+		"description": "Immeuble de bureaux nouvelle génération combinant espaces de travail hybrides, salles de réunion immersives avec visioconférence studio-grade, et espace de co-living de 20 appartements pour cadres en mobilité. Conciergerie digitale, application propriétaire d'occupation dynamique des postes, certification WELL Platinum et Wiredscore Platinum. Bail flexible coworking opérateur de premier plan."
+	}
+]

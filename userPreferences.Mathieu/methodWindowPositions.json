@@ -1,0 +1,38 @@
+{
+	"Sources/Classes/formPrimeMatch.4dm": {
+		"left": 495,
+		"top": 155,
+		"width": 1441,
+		"height": 736
+	},
+	"Sources/Forms/PrimeMatch/ObjectMethods/btnExecute.4dm": {
+		"left": 113,
+		"top": 584,
+		"width": 950,
+		"height": 501
+	},
+	"Sources/Methods/PM_OnStartup.4dm": {
+		"left": 342,
+		"top": 175,
+		"width": 950,
+		"height": 501
+	},
+	"Sources/DatabaseMethods/onStartup.4dm": {
+		"left": 311,
+		"top": 128,
+		"width": 950,
+		"height": 501
+	},
+	"Sources/Classes/formAIConfig.4dm": {
+		"left": 330,
+		"top": 276,
+		"width": 1441,
+		"height": 736
+	},
+	"Sources/Forms/PrimeMatch/method.4dm": {
+		"left": 659,
+		"top": 374,
+		"width": 950,
+		"height": 501
+	}
+}

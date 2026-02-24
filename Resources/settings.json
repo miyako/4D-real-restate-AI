@@ -1,0 +1,26 @@
+﻿{
+	"embedding": {
+		"server": "lmstudio",
+		"model": "text-embedding-nomic-embed-text-v1.5"
+	},
+	"chat": {
+		"server": "lmstudio",
+		"model": "qwen/qwen3-4b-2507"
+	},
+	"lastEmbeddingDate": "2026-02-13T14:45:23",
+	"language": "en",
+	"servers": {
+		"ollama": {
+			"baseURL": "http://127.0.0.1:11434/v1",
+			"apiKey": "ollama"
+		},
+		"lmstudio": {
+			"baseURL": "http://localhost:1234/v1",
+			"apiKey": "lm-studio"
+		},
+		"openai": {
+			"baseURL": "https://api.openai.com/v1",
+			"apiKey": ""
+		}
+	}
+}

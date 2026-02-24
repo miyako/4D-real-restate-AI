@@ -1,0 +1,36 @@
+{
+	"tables": {
+		"SearchHistory": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 240,
+				"top": 40,
+				"width": 192.79296875,
+				"height": 255.87109375
+			},
+			"displayable_fields_count": 10,
+			"fields_ordering": 1
+		},
+		"Properties": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 40,
+				"top": 40,
+				"width": 178.58984375,
+				"height": 286.2734375
+			},
+			"displayable_fields_count": 11,
+			"fields_ordering": 1
+		}
+	}
+}

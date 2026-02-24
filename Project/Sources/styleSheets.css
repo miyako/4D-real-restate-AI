@@ -1,0 +1,183 @@
+/* ============================================
+   PrimeMatch | Global Stylesheet
+   Dark premium theme for all forms
+   ============================================ */
+
+/* --- Backgrounds --- */
+
+.bgDark {
+    fill: #0E1A2B;
+    stroke: transparent;
+}
+
+.bgHeader {
+    fill: #0A1628;
+    stroke: transparent;
+}
+
+/* --- Accent Decorations --- */
+
+.accentBar {
+    fill: #C9A84C;
+    stroke: transparent;
+    borderRadius: 1;
+}
+
+.accentLine {
+    fill: #C9A84C;
+    stroke: transparent;
+}
+
+/* --- Card Containers --- */
+
+.card {
+    fill: #0D1826;
+    stroke: #1E3045;
+    strokeWidth: 1;
+    borderRadius: 12;
+}
+
+/* --- Typography --- */
+
+.headerTitle {
+    fontWeight: bold;
+    stroke: #FFFFFF;
+    textAlign: left;
+}
+
+.sectionTitle {
+    fontSize: 15;
+    fontWeight: bold;
+    stroke: #F0F4F8;
+}
+
+.sectionTitleGold {
+    fontWeight: bold;
+    stroke: #C9A84C;
+}
+
+.subTitle {
+    fontSize: 12;
+    fontWeight: bold;
+    stroke: #7B8FA3;
+}
+
+.fieldLabel {
+    fontSize: 13;
+    stroke: #8899AA;
+}
+
+.fieldLabelSm {
+    fontSize: 12;
+    stroke: #FFFFFF;
+}
+
+.dimText {
+    fontSize: 11;
+    stroke: #4A5A6A;
+}
+
+/* --- Dropdowns --- */
+
+.dropdown {
+    fontSize: 13;
+    borderRadius: 6;
+    fill: #0D1826;
+    stroke: #2A3F55;
+    strokeWidth: 1;
+}
+
+.dropdownSm {
+    fontSize: 12;
+    borderRadius: 6;
+    stroke: #2A3F55;
+    strokeWidth: 1;
+}
+
+/* --- Read-only Display --- */
+
+.readonlyDisplay {
+    fill: transparent;
+    borderStyle: none;
+}
+
+/* --- Buttons --- */
+
+.btnPrimary {
+    fill: #C9A84C;
+    stroke: #0A1628;
+    fontWeight: bold;
+    borderRadius: 8;
+}
+
+.btnCTA {
+    fontSize: 16;
+    fill: #00C9A7;
+    stroke: #FFFFFF;
+    fontWeight: bold;
+    borderRadius: 10;
+}
+
+.btnDemoBlue {
+    fontSize: 11;
+    fill: #2D5F8A;
+    stroke: #FFFFFF;
+    borderRadius: 8;
+}
+
+.btnDemoPurple {
+    fontSize: 11;
+    fill: #6B4FA0;
+    stroke: #FFFFFF;
+    borderRadius: 8;
+}
+
+.btnSecondary {
+    fill: #1E3045;
+    stroke: #FFFFFF;
+    borderRadius: 6;
+}
+
+.btnCancel {
+    fill: #1E3045;
+    stroke: #8899AA;
+    borderRadius: 8;
+}
+
+.btnDanger {
+    fill: #9B4444;
+    stroke: #FFFFFF;
+    borderRadius: 8;
+}
+
+.btnAction {
+    fill: #8B6E47;
+    stroke: #FFFFFF;
+    borderRadius: 8;
+}
+
+/* --- Separators --- */
+
+.separator {
+    stroke: #1E3045;
+    strokeWidth: 1;
+}
+
+.separatorLight {
+    stroke: #1A2D40;
+    strokeWidth: 1;
+}
+
+/* --- Listbox Column Headers --- */
+
+header.colHeader {
+    stroke: #8899AA;
+    fontWeight: bold;
+    fontSize: 12;
+}
+
+header.colHeaderGold {
+    stroke: #C9A84C;
+    fontWeight: bold;
+    fontSize: 12;
+}
