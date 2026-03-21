@@ -8,15 +8,15 @@
 		"model": "qwen/qwen3-4b-2507"
 	},
 	"lastEmbeddingDate": "2026-02-13T14:45:23",
-	"language": "en",
+	"language": "ja",
 	"servers": {
 		"ollama": {
 			"baseURL": "http://127.0.0.1:11434/v1",
-			"apiKey": "ollama"
+			"apiKey": ""
 		},
 		"lmstudio": {
 			"baseURL": "http://localhost:1234/v1",
-			"apiKey": "lm-studio"
+			"apiKey": ""
 		},
 		"openai": {
 			"baseURL": "https://api.openai.com/v1",
