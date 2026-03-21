@@ -1,3 +1,4 @@
 setup_local_llm_ct2
+setup_local_llm_llamacpp
 
 PM_OnStartup
