@@ -344,7 +344,8 @@
 					"stroke": "#6B7F96",
 					"multiline": "yes",
 					"wordwrap": "automatic",
-					"focusable": false
+					"focusable": false,
+					"fontWeight": "bold"
 				},
 				"resultsAccent": {
 					"type": "rectangle",
@@ -414,6 +415,8 @@
 					],
 					"method": "ObjectMethods/listboxResults.4dm",
 					"scrollbarHorizontal": "hidden",
+					"staticColumnCount": 7,
+					"resizingMode": "legacy",
 					"columns": [
 						{
 							"header": {
@@ -431,7 +434,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer1"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -445,7 +449,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer2"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -459,7 +464,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer3"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -473,7 +479,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer4"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -488,7 +495,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer5"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -504,7 +512,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer6"
-							}
+							},
+							"truncateMode": "none"
 						},
 						{
 							"header": {
@@ -520,7 +529,8 @@
 							"enterable": false,
 							"footer": {
 								"name": "Footer7"
-							}
+							},
+							"truncateMode": "none"
 						}
 					]
 				},
@@ -585,7 +595,8 @@
 					"wordwrap": "automatic",
 					"fontSize": 12,
 					"stroke": "#8899AA",
-					"focusable": false
+					"focusable": false,
+					"fontWeight": "bold"
 				},
 				"cardHighlights": {
 					"type": "rectangle",
@@ -627,7 +638,8 @@
 					"wordwrap": "automatic",
 					"fontSize": 12,
 					"stroke": "#5DCEAF",
-					"focusable": false
+					"focusable": false,
+					"fontWeight": "bold"
 				},
 				"labelMetrics": {
 					"type": "input",

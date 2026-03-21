@@ -589,7 +589,7 @@ Function listboxResultsEventHandler($formEventCode : Integer)
 					String(This.selectedResult.sqft; "###,###,##0"); \
 					String(This.selectedResult.yearBuilt)))
 				
-				This.detailHighlights:=cs.AppUtils.me.loc("msg_generating_analysis")
+				This.detailHighlights:=""  //cs.AppUtils.me.loc("msg_generating_analysis")
 				
 				// Show progress bar and start animation timer
 				This.analysisProgress:=0
@@ -603,17 +603,120 @@ Function listboxResultsEventHandler($formEventCode : Integer)
 				var $matchScore : Real
 				var $isFrench : Boolean
 				var $formWindow : Integer
-				var $settingsLang : Object
+				var $settingsLang : Text
 				$mandate:=This.mandateText
 				$description:=This.selectedResult.description
 				$matchScore:=This.selectedResult.matchScore
-				$settingsLang:=cs.AppUtils.me.readSettings()
-				$isFrench:=($settingsLang.language="fr")
-				$formWindow:=Current form window
+				$settingsLang:=cs.AppUtils.me.readSettings().language
 				
-				CALL WORKER("semanticWorker"; "_semanticHighlightsAsync"; $mandate; $description; $matchScore; $isFrench; $formWindow)
+				This._semanticHighlightsAsync($mandate; $description; $matchScore; $settingsLang)
+				
 			End if 
 	End case 
+	
+Function _semanticHighlightsAsync($mandate : Text; $description : Text; $matchScore : Real; $settingsLang : Text)
+	
+	var $highlights : Text
+	var $settings : Object
+	var $AppUtils : Object
+	$AppUtils:=cs.AppUtils.me
+	$settings:=$AppUtils.readSettings()
+	
+	var $serverName : Text
+	$serverName:=$settings.chat.server
+	var $serverConfig : Object
+	$serverConfig:=$settings.servers[$serverName]
+	
+	If ($serverConfig=Null)
+		$highlights:="Server '"+$serverName+"' not configured."
+	Else 
+		var $client : cs.AIKit.OpenAI
+		$client:=Try(cs.AIKit.OpenAI.new($serverConfig))
+		
+		// --- Build prompts ---
+		
+		var $systemPrompt : Text
+		$systemPrompt:=cs.AppUtils.me.loc("msg_generating_analysis_prompt")
+		
+		Case of 
+			: ($settingsLang="fr")
+				$systemPrompt+="\nAnswer everything in French."
+			: ($settingsLang="ja")
+				$systemPrompt+="\nAnswer everything in Japanese."
+		End case 
+		
+		var $userPrompt : Text
+		$userPrompt:=cs.AppUtils.me.loc("msg_generating_analysis_prompt_user_prefix")\
+			+"\""+$mandate+"\""\
+			+cs.AppUtils.me.loc("msg_generating_analysis_prompt_user_description")\
+			+"\""+$description+"\""\
+			+cs.AppUtils.me.loc("msg_generating_analysis_prompt_user_match")\
+			+String($matchScore; "###.#")+"%"\
+			+cs.AppUtils.me.loc("msg_generating_analysis_prompt_user_suffix")
+		
+		var $chatModel : Text
+		$chatModel:=$settings.chat.model
+		
+		var $messages : Collection
+		$messages:=New collection(\
+			New object("role"; "system"; "content"; $systemPrompt); \
+			New object("role"; "user"; "content"; $userPrompt))
+		
+		var $customHeaders : Object
+		$customHeaders:={}
+		
+		// --- Call AI ---
+		var $chatResult : Object
+		$chatResult:=Try($client.chat.completions.create($messages; {\
+			model: $chatModel; \
+			formula: Form.response; \
+			customHeaders: $customHeaders; \
+			stream: True}))
+		
+	End if 
+	
+Function response($ChatCompletionsResult : cs.AIKit.OpenAIChatCompletionsResult)
+	
+	If (Form=Null)
+		return 
+	End if 
+	
+	var $highlights : Text
+	
+	If ($ChatCompletionsResult.errors#Null) && ($ChatCompletionsResult.errors.length#0)
+		$highlights:=$ChatCompletionsResult.errors.extract("message").join("\r")
+		Form._onHighlightsReceived($highlights)
+		return 
+	End if 
+	
+	If ($ChatCompletionsResult.success)
+		If ($ChatCompletionsResult.terminated)
+			Case of 
+				: ($ChatCompletionsResult.choice.finish_reason="length")
+					$highlights:="too many tokens!"
+					Form._onHighlightsReceived($highlights)
+					return 
+				: ($ChatCompletionsResult.choice.finish_reason="stop")
+					Form._onHighlightsReceived(Form.detailHighlights)
+					return 
+				: ($ChatCompletionsResult.choice.finish_reason="tool_calls")
+					Form._onHighlightsReceived(Form.detailHighlights)
+					return 
+			End case 
+		Else 
+			var $end : Integer
+			If ($ChatCompletionsResult.choice.delta.text#Null)
+				Form.detailHighlights+=$ChatCompletionsResult.choice.delta.text
+				$end:=Length(Form.detailHighlights)+1
+				HIGHLIGHT TEXT(*; "txtHighlights"; $end; $end)
+			End if 
+			If ($ChatCompletionsResult.choice.delta["reasoning_content"]#Null)
+				Form.detailDescription+=$ChatCompletionsResult.choice.delta["reasoning_content"]
+				$end:=Length(Form.detailDescription)+1
+				HIGHLIGHT TEXT(*; "txtDescription"; $end; $end)
+			End if 
+		End if 
+	End if 
 	
 	//MARK: - Expand / Collapse results panel
 	

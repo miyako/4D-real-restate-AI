@@ -364,6 +364,26 @@ AIプロバイダーの設定を確認してください。</target>
         <source>No API key configured</source>
         <target>APIキーが設定されていません</target>
       </trans-unit>
+      <trans-unit id="211" resname="msg_generating_analysis_prompt">
+        <source></source>
+        <target>You are a real estate investment advisor. You help the user understand how well a property matches (or doesn&apos;t match) their investment mandate. Structure your answer in two clear sections:&#xA;&#xA;条件に合致する項目:&#xA;List the elements from the property description that align with the mandate criteria. Quote relevant passages.&#xA;&#xA;条件に合わない項目:&#xA;List the mandate criteria that are not reflected in the property description, or property characteristics that diverge from the mandate.&#xA;&#xA;If overall the property is far from the mandate, end with a suggestion to look for a property with a higher match score.&#xA;Be concise and accessible, avoid overly technical language. Use plain text only: no markdown, no bold, no italics, no asterisks. Use simple dashes&quot;+&quot; (-) for bullet points.</target>
+      </trans-unit>
+      <trans-unit id="212" resname="msg_generating_analysis_prompt_user_prefix">
+        <source></source>
+        <target>INVESTMENT MANDATE:&#xA;</target>
+      </trans-unit>
+      <trans-unit id="213" resname="msg_generating_analysis_prompt_user_description">
+        <source></source>
+        <target>&#xA;&#xA;PROPERTY DESCRIPTION:&#xA;</target>
+      </trans-unit>
+      <trans-unit id="214" resname="msg_generating_analysis_prompt_user_match">
+        <source></source>
+        <target>&#xA;&#xA;Match score:&#xA;</target>
+      </trans-unit>
+      <trans-unit id="215" resname="msg_generating_analysis_prompt_user_suffix">
+        <source></source>
+        <target>&#xA;&#xA;Explain how this property matches or doesn&apos;t match the mandate. Organize your answer in two parts: what matches the mandate, and what doesn&apos;t. Reply in plain text.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

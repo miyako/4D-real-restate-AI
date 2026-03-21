@@ -25,6 +25,8 @@ $event.onTerminate:=Formula(LOG EVENT(Into 4D debug message; (["process"; $1.pid
 
 $port:=8080
 
+var $folder : 4D.Folder
+var $path : Text
 $folder:=$homeFolder.folder("Qwen3-4B-Instruct-2507")  //where to keep the repo
 $path:="Qwen3-4B-Instruct-2507-Q4_K_M.gguf"  //path to the file
 $URL:="keisuke-miyako/Qwen3-4B-Instruct-2507-gguf-q4k_m"  //path to the repo
@@ -36,13 +38,15 @@ If (Not($logFile.exists))
 	$logFile.setContent(4D.Blob.new())
 End if 
 
-$batch_size:=32000
+var $batch_size; $batches; $threads : Integer
+$batch_size:=8192
 $batches:=2
-$threads:=1
+$threads:=2
 
 var $cores : Integer
 $cores:=System info.cores\2
 
+var $options : Object
 $options:={\
 log_file: $logFile; \
 ctx_size: $batch_size*$batches*$threads; \
@@ -54,11 +58,24 @@ threads_http: $threads; \
 log_disable: False; \
 n_gpu_layers: -1}
 
-$folder:=$homeFolder.folder("Qwen3.5-0.8B")
-$path:="Qwen3.5-0.8B-Q4_K_M.gguf"
-$URL:="unsloth/Qwen3.5-0.8B-GGUF"
+//; \
+temperature: 1; \
+top_p: 1; \
+top_k: 20; \
+presence_penalty: 2; \
+repeat_penalty: 1}
+
+$folder:=$homeFolder.folder("LFM2.5-1.2B-JP")
+$path:="LFM2.5-1.2B-JP-Q4_k_m.gguf"
+$URL:="keisuke-miyako/LFM2.5-1.2B-JP-q4_k_m"
+
+$folder:=$homeFolder.folder("RakutenAI-2.0-mini-instruct")
+$path:="RakutenAI-2.0-mini-instruct-Q4_k_m.gguf"
+$URL:="keisuke-miyako/RakutenAI-2.0-mini-instruct-gguf-q4_k_m"
+
 var $embeddings : cs.event.huggingface
 $embeddings:=cs.event.huggingface.new($folder; $URL; $path)
+var $huggingfaces : cs.event.huggingfaces
 $huggingfaces:=cs.event.huggingfaces.new([$embeddings])
 
 $llama:=cs.llama.llama.new($port; $huggingfaces; $homeFolder; $options; $event)
