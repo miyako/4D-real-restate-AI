@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="ja" datatype="plaintext" original="ui">
+    <body>
+      <!-- ==================== PrimeMatch Form Labels ==================== -->
+      <trans-unit id="1" resname="pm_title">
+        <source>PrimeMatch | AI Screener</source>
+        <target>PrimeMatch | AIスクリーナー</target>
+      </trans-unit>
+      <trans-unit id="2" resname="pm_ai_settings">
+        <source>Settings...</source>
+        <target>設定...</target>
+      </trans-unit>
+      <trans-unit id="3" resname="pm_mandate_input">
+        <source>MANDATE INPUT</source>
+        <target>投資要件入力</target>
+      </trans-unit>
+      <trans-unit id="4" resname="pm_region">
+        <source>Region:</source>
+        <target>地域:</target>
+      </trans-unit>
+      <trans-unit id="5" resname="pm_asset_type">
+        <source>Asset Type:</source>
+        <target>アセットタイプ:</target>
+      </trans-unit>
+      <trans-unit id="6" resname="pm_min_yield">
+        <source>Min Yield:</source>
+        <target>最小利回り:</target>
+      </trans-unit>
+      <trans-unit id="7" resname="pm_thesis_label">
+        <source>Investment Thesis / Mandate:</source>
+        <target>投資テーマ / 投資要件:</target>
+      </trans-unit>
+      <trans-unit id="8" resname="pm_execute">
+        <source>Execute Intelligence Match</source>
+        <target>インテリジェンスマッチを実行</target>
+      </trans-unit>
+      <trans-unit id="9" resname="pm_demo_section">
+        <source>DEMO SCENARIOS</source>
+        <target>デモシナリオ</target>
+      </trans-unit>
+      <trans-unit id="10" resname="pm_demo_a">
+        <source>A: Sustainable Office</source>
+        <target>A: サステナブルオフィス</target>
+      </trans-unit>
+      <trans-unit id="11" resname="pm_demo_b">
+        <source>B: Distressed Assets</source>
+        <target>B: ディストレス資産</target>
+      </trans-unit>
+      <trans-unit id="12" resname="pm_demo_c">
+        <source>C: Urban Logistics (FR)</source>
+        <target>C: 都市型ロジスティクス</target>
+      </trans-unit>
+      <trans-unit id="13" resname="pm_demo_d">
+        <source>D: Premium Office</source>
+        <target>D: プレミアムオフィス</target>
+      </trans-unit>
+      <trans-unit id="14" resname="pm_load_data">
+        <source>Load Demo Data</source>
+        <target>デモデータを読み込む</target>
+      </trans-unit>
+      <trans-unit id="15" resname="pm_regenerate">
+        <source>Regenerate Embeddings</source>
+        <target>埋め込みを再生成</target>
+      </trans-unit>
+      <trans-unit id="16" resname="pm_results">
+        <source>MATCH RESULTS</source>
+        <target>マッチング結果</target>
+      </trans-unit>
+      <trans-unit id="17" resname="pm_detail">
+        <source>PROPERTY DETAIL &amp; SEMANTIC INSIGHT</source>
+        <target>物件詳細とセマンティックインサイト</target>
+      </trans-unit>
+      <trans-unit id="18" resname="pm_description">
+        <source>Description:</source>
+        <target>説明:</target>
+      </trans-unit>
+      <trans-unit id="19" resname="pm_highlights">
+        <source>Semantic Highlights:</source>
+        <target>セマンティックハイライト:</target>
+      </trans-unit>
+      <trans-unit id="20" resname="pm_footer">
+        <source>PrimeMatch v1.0 · 4D + AI Vector Search  |  Offline-First Desktop Intelligence</source>
+        <target>PrimeMatch v1.0 · 4D + AIベクトル検索 | オフラインファースト・デスクトップインテリジェンス</target>
+      </trans-unit>
+      <trans-unit id="21" resname="pm_col_match">
+        <source>Match %</source>
+        <target>マッチ率(%)</target>
+      </trans-unit>
+      <trans-unit id="22" resname="pm_col_name">
+        <source>Property Name</source>
+        <target>物件名</target>
+      </trans-unit>
+      <trans-unit id="23" resname="pm_col_region">
+        <source>Region</source>
+        <target>地域</target>
+      </trans-unit>
+      <trans-unit id="24" resname="pm_col_asset">
+        <source>Asset Type</source>
+        <target>アセットタイプ</target>
+      </trans-unit>
+      <trans-unit id="25" resname="pm_col_yield">
+        <source>Yield %</source>
+        <target>利回り(%)</target>
+      </trans-unit>
+      <trans-unit id="26" resname="pm_col_price">
+        <source>Price ($)</source>
+        <target>価格 ($)</target>
+      </trans-unit>
+      <trans-unit id="27" resname="pm_col_sqft">
+        <source>Sq Ft</source>
+        <target>Sq Ft</target>
+      </trans-unit>
+      <trans-unit id="28" resname="pm_thesis_placeholder">
+        <source>Describe your investment strategy...</source>
+        <target>投資戦略を記述してください...
+例：「グリーンエネルギーを活用したラストマイル物流倉庫」</target>
+      </trans-unit>
+
+      <!-- ==================== AIConfig Form Labels ==================== -->
+      <trans-unit id="50" resname="ac_title">
+        <source>Settings</source>
+        <target>設定</target>
+      </trans-unit>
+      <trans-unit id="50b" resname="ac_lang_section">
+        <source>LANGUAGE</source>
+        <target>言語</target>
+      </trans-unit>
+      <trans-unit id="50c" resname="ac_language">
+        <source>Language:</source>
+        <target>言語:</target>
+      </trans-unit>
+      <trans-unit id="51" resname="ac_embed_section">
+        <source>EMBEDDING SERVER &amp; MODEL</source>
+        <target>埋め込みサーバーとモデル</target>
+      </trans-unit>
+      <trans-unit id="52" resname="ac_server">
+        <source>Server:</source>
+        <target>サーバー:</target>
+      </trans-unit>
+      <trans-unit id="53" resname="ac_model">
+        <source>Model:</source>
+        <target>モデル:</target>
+      </trans-unit>
+      <trans-unit id="54" resname="ac_refresh">
+        <source>Refresh</source>
+        <target>更新</target>
+      </trans-unit>
+      <trans-unit id="55" resname="ac_chat_section">
+        <source>CHAT SERVER &amp; MODEL</source>
+        <target>チャットサーバーとモデル</target>
+      </trans-unit>
+      <trans-unit id="56" resname="ac_openai_section">
+        <source>OPENAI API KEY</source>
+        <target>OPENAI APIキー</target>
+      </trans-unit>
+      <trans-unit id="57" resname="ac_set_key">
+        <source>Set Key...</source>
+        <target>キーを設定...</target>
+      </trans-unit>
+      <trans-unit id="58" resname="ac_save">
+        <source>Save</source>
+        <target>保存</target>
+      </trans-unit>
+      <trans-unit id="59" resname="ac_cancel">
+        <source>Cancel</source>
+        <target>キャンセル</target>
+      </trans-unit>
+
+      <!-- ==================== Dynamic Code Messages ==================== -->
+      <trans-unit id="100" resname="msg_ready">
+        <source>Ready. Load demo data or enter a mandate to search.</source>
+        <target>準備完了。デモデータを読み込むか、投資要件を入力して検索してください。</target>
+      </trans-unit>
+      <trans-unit id="101" resname="msg_props_in_db">
+        <source>{1} properties in database. Ready to search.</source>
+        <target>データベースに{1}件の物件があります。検索の準備ができました。</target>
+      </trans-unit>
+      <trans-unit id="102" resname="msg_no_embeddings_yet">
+        <source>No embeddings yet</source>
+        <target>埋め込みはまだありません</target>
+      </trans-unit>
+      <trans-unit id="103" resname="msg_last_embed">
+        <source>Last embed: {1}</source>
+        <target>最終埋め込み: {1}</target>
+      </trans-unit>
+      <trans-unit id="104" resname="msg_enter_mandate">
+        <source>Please enter an Investment Thesis / Mandate.</source>
+        <target>投資テーマ / 投資要件を入力してください。</target>
+      </trans-unit>
+      <trans-unit id="105" resname="msg_embed_failed">
+        <source>Failed to generate embedding for the mandate text.
+Check your AI provider settings.</source>
+        <target>要件テキストの埋め込み生成に失敗しました。
+AIプロバイダーの設定を確認してください。</target>
+      </trans-unit>
+      <trans-unit id="106" resname="msg_searching">
+        <source>Searching... Generating mandate embedding and computing vector distances.</source>
+        <target>検索中... 投資要件の埋め込みを生成し、ベクトル距離を計算しています。</target>
+      </trans-unit>
+      <trans-unit id="107" resname="msg_n_results">
+        <source>{1} results</source>
+        <target>{1}件の結果</target>
+      </trans-unit>
+      <trans-unit id="108" resname="msg_search_complete">
+        <source>Search complete. {1} properties ranked by semantic match.</source>
+        <target>検索完了。セマンティックマッチにより{1}件の物件がランク付けされました。</target>
+      </trans-unit>
+      <trans-unit id="109" resname="msg_loading_demo">
+        <source>Loading demo properties with embeddings... This may take a moment.</source>
+        <target>埋め込み付きのデモ物件を読み込んでいます... しばらくお待ちください。</target>
+      </trans-unit>
+      <trans-unit id="110" resname="msg_no_props_db">
+        <source>No properties in database. Load demo data first.</source>
+        <target>データベースに物件がありません。先にデモデータを読み込んでください。</target>
+      </trans-unit>
+      <trans-unit id="111" resname="msg_confirm_regen">
+        <source>Regenerate all {1} embeddings using {2} / {3}?</source>
+        <target>{2} / {3} を使用してすべての{1}件の埋め込みを再生成しますか？</target>
+      </trans-unit>
+      <trans-unit id="112" resname="msg_btn_regenerate">
+        <source>Regenerate</source>
+        <target>再生成</target>
+      </trans-unit>
+      <trans-unit id="113" resname="msg_btn_cancel">
+        <source>Cancel</source>
+        <target>キャンセル</target>
+      </trans-unit>
+      <trans-unit id="114" resname="msg_demo_a_loaded">
+        <source>Demo A loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>デモAを読み込みました。「インテリジェンスマッチを実行」をクリックして検索してください。</target>
+      </trans-unit>
+      <trans-unit id="115" resname="msg_demo_b_loaded">
+        <source>Demo B loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>デモBを読み込みました。「インテリジェンスマッチを実行」をクリックして検索してください。</target>
+      </trans-unit>
+      <trans-unit id="116" resname="msg_demo_c_loaded">
+        <source>Scenario C loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>シナリオCを読み込みました。「インテリジェンスマッチを実行」をクリックして検索してください。</target>
+      </trans-unit>
+      <trans-unit id="117" resname="msg_demo_d_loaded">
+        <source>Scenario D loaded. Click 'Execute Intelligence Match' to search.</source>
+        <target>シナリオDを読み込みました。「インテリジェンスマッチを実行」をクリックして検索してください。</target>
+      </trans-unit>
+      <trans-unit id="118" resname="msg_generating_analysis">
+        <source>Generating semantic analysis...</source>
+        <target>セマンティック分析を生成中...</target>
+      </trans-unit>
+      <trans-unit id="119" resname="msg_props_loaded">
+        <source>{1} properties loaded. {2} embeddings generated.</source>
+        <target>{1}件の物件を読み込みました。{2}件の埋め込みが生成されました。</target>
+      </trans-unit>
+      <trans-unit id="120" resname="msg_embed_failures">
+        <source> ({1} embed failures)</source>
+        <target> ({1}件の埋め込み失敗)</target>
+      </trans-unit>
+      <trans-unit id="121" resname="msg_save_failures">
+        <source> ({1} save failures)</source>
+        <target> ({1}件の保存失敗)</target>
+      </trans-unit>
+      <trans-unit id="122" resname="msg_loading_props">
+        <source>Loading properties... {1}/{2}</source>
+        <target>物件を読み込んでいます... {1}/{2}</target>
+      </trans-unit>
+      <trans-unit id="123" resname="msg_no_props_regen">
+        <source>No properties to regenerate.</source>
+        <target>再生成する物件がありません。</target>
+      </trans-unit>
+      <trans-unit id="124" resname="msg_regen_progress">
+        <source>Regenerating embeddings... {1}/{2}</source>
+        <target>埋め込みを再生成しています... {1}/{2}</target>
+      </trans-unit>
+      <trans-unit id="125" resname="msg_regen_done">
+        <source>Embeddings regenerated: {1}/{2} succeeded.</source>
+        <target>埋め込み再生成完了: {1}/{2}件成功。</target>
+      </trans-unit>
+      <trans-unit id="126" resname="msg_regen_failed">
+        <source> ({1} failed)</source>
+        <target> ({1}件失敗)</target>
+      </trans-unit>
+      <trans-unit id="127" resname="msg_demo_not_found">
+        <source>demo_properties.json not found in Resources folder.</source>
+        <target>Resourcesフォルダーに demo_properties.json が見つかりません。</target>
+      </trans-unit>
+      <trans-unit id="128" resname="msg_demo_parse_fail">
+        <source>Failed to parse demo_properties.json.</source>
+        <target>demo_properties.json の解析に失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="130" resname="msg_server_not_config">
+        <source>Server '{1}' not configured in settings.json.</source>
+        <target>settings.json にサーバー '{1}' が設定されていません。</target>
+      </trans-unit>
+      <trans-unit id="131" resname="msg_enter_api_key">
+        <source>Enter your OpenAI API key:</source>
+        <target>OpenAI APIキーを入力してください:</target>
+      </trans-unit>
+      <trans-unit id="132" resname="msg_api_key_required">
+        <source>OpenAI API key is required.</source>
+        <target>OpenAI APIキーが必要です。</target>
+      </trans-unit>
+      <trans-unit id="133" resname="msg_embed_error">
+        <source>Embedding failed ({1} / {2})</source>
+        <target>埋め込みに失敗しました ({1} / {2})</target>
+      </trans-unit>
+      <trans-unit id="134" resname="msg_embed_null">
+        <source>Embedding call returned Null ({1} / {2}). Is the server running and the model loaded?</source>
+        <target>埋め込みの呼び出しがNullを返しました ({1} / {2})。サーバーが稼働しており、モデルが読み込まれているか確認してください。</target>
+      </trans-unit>
+      <trans-unit id="135" resname="msg_detail_metrics">
+        <source>Region: {1}  |  Asset Type: {2}  |  Yield: {3}%  |  Price: ${4}  |  Size: {5} sqft  |  Built: {6}</source>
+        <target>地域: {1} | アセットタイプ: {2} | 利回り: {3}% | 価格: ${4} | 面積: {5} sqft | 築年: {6}</target>
+      </trans-unit>
+      <trans-unit id="136" resname="msg_match_label">
+        <source> · Match: </source>
+        <target> · マッチ率: </target>
+      </trans-unit>
+      <trans-unit id="137" resname="msg_enter_mandate_search">
+        <source>Please enter an Investment Thesis / Mandate to search.</source>
+        <target>検索するには投資テーマ / 投資要件を入力してください。</target>
+      </trans-unit>
+
+      <!-- ==================== AIConfig Code Messages ==================== -->
+      <trans-unit id="200" resname="msg_ac_load_models">
+        <source>Load models from each server, then select the desired ones.</source>
+        <target>各サーバーからモデルを読み込み、希望のモデルを選択してください。</target>
+      </trans-unit>
+      <trans-unit id="201" resname="msg_ac_server_not_config">
+        <source>Server '{1}' not configured.</source>
+        <target>サーバー '{1}' が設定されていません。</target>
+      </trans-unit>
+      <trans-unit id="202" resname="msg_ac_no_api_key">
+        <source>OpenAI API key not set. Click 'Set Key...' first.</source>
+        <target>OpenAI APIキーが設定されていません。先に「キーを設定...」をクリックしてください。</target>
+      </trans-unit>
+      <trans-unit id="203" resname="msg_ac_loading_models">
+        <source>Loading models from {1}...</source>
+        <target>{1} からモデルを読み込んでいます...</target>
+      </trans-unit>
+      <trans-unit id="204" resname="msg_ac_models_loaded">
+        <source>{1} models loaded from {2}.</source>
+        <target>{2} から {1} 個のモデルを読み込みました。</target>
+      </trans-unit>
+      <trans-unit id="205" resname="msg_ac_refreshing">
+        <source>Refreshing models from {1}...</source>
+        <target>{1} のモデルを更新しています...</target>
+      </trans-unit>
+      <trans-unit id="206" resname="msg_ac_api_saved">
+        <source>OpenAI API key saved.</source>
+        <target>OpenAI APIキーを保存しました。</target>
+      </trans-unit>
+      <trans-unit id="207" resname="msg_ac_config_saved_note">
+        <source>Configuration saved. Note: if embedding model changed, consider regenerating embeddings from the main screen.</source>
+        <target>設定を保存しました。注：埋め込みモデルが変更された場合は、メイン画面から埋め込みを再生成することを推奨します。</target>
+      </trans-unit>
+      <trans-unit id="208" resname="msg_ac_config_saved">
+        <source>Configuration saved.</source>
+        <target>設定を保存しました。</target>
+      </trans-unit>
+      <trans-unit id="209" resname="msg_ac_key_set">
+        <source>API key is set ({1}...)</source>
+        <target>APIキーが設定されています ({1}...)</target>
+      </trans-unit>
+      <trans-unit id="210" resname="msg_ac_no_key">
+        <source>No API key configured</source>
+        <target>APIキーが設定されていません</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
