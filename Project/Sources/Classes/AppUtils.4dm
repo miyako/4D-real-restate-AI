@@ -26,6 +26,7 @@ Function readSettings()->$settings : Object
 			openai: {baseURL: "https://api.openai.com/v1"; apiKey: ""}}}
 	End if 
 	
+	var $server : Text
 	For each ($server; $settings.servers)
 		$settings.servers[$server].apiKey:=This._getKeyForProvider($server)
 	End for each 
@@ -50,6 +51,7 @@ Function _getKeyForProvider($provider : Text) : Text
 	
 Function saveSettings($settings : Object)
 	
+	var $server : Text
 	For each ($server; $settings.servers)
 		This._setKeyForProvider($server; $settings.servers[$server].apiKey)
 		$settings.servers[$server].apiKey:=""

@@ -1,4 +1,3 @@
-//%attributes = {"lang":"en"} comment added and reserved by 4D
 // Class: formPrimeMatch
 // Description: Form class for the PrimeMatch AI-Driven Investment Screener.
 //   100% class-based — all AI logic, data loading, and search live here.
@@ -87,9 +86,9 @@ Class constructor()
 	If ($propCount>0)
 		This.statusMessage:=cs.AppUtils.me.locP("msg_props_in_db"; New collection($propCount))
 	End if 
-
-//MARK: - Header summary
-
+	
+	//MARK: - Header summary
+	
 Function _refreshHeaderSummary()
 	var $s : Object
 	$s:=cs.AppUtils.me.readSettings()
@@ -106,10 +105,10 @@ Function _refreshHeaderSummary()
 	End if 
 	
 	This.providerLabel:="Embed: "+$embedInfo+"  |  Chat: "+$chatInfo+$dateInfo
-
-//MARK: - AI Client factory
-
-Function _createClient($serverName : Text) -> $client : Object
+	
+	//MARK: - AI Client factory
+	
+Function _createClient($serverName : Text)->$client : Object
 	// Creates an AIKit OpenAI client for the given server name.
 	// If openai and no API key, prompts the user.
 	var $settings : Object
@@ -119,7 +118,7 @@ Function _createClient($serverName : Text) -> $client : Object
 	
 	If ($serverConfig=Null)
 		ALERT(cs.AppUtils.me.locP("msg_server_not_config"; New collection($serverName)))
-		return
+		return 
 	End if 
 	
 	// If OpenAI and no API key, prompt
@@ -132,15 +131,15 @@ Function _createClient($serverName : Text) -> $client : Object
 			cs.AppUtils.me.saveSettings($settings)
 		Else 
 			ALERT(cs.AppUtils.me.loc("msg_api_key_required"))
-			return
+			return 
 		End if 
 	End if 
 	
 	$client:=Try(cs.AIKit.OpenAI.new({apiKey: $serverConfig.apiKey; baseURL: $serverConfig.baseURL}))
-
-//MARK: - Generate Embedding
-
-Function _generateEmbedding($text : Text) -> $vector : Object
+	
+	//MARK: - Generate Embedding
+	
+Function _generateEmbedding($text : Text)->$vector : Object
 	var $settings : Object
 	$settings:=cs.AppUtils.me.readSettings()
 	
@@ -148,7 +147,7 @@ Function _generateEmbedding($text : Text) -> $vector : Object
 	$client:=This._createClient($settings.embedding.server)
 	
 	If ($client=Null)
-		return
+		return 
 	End if 
 	
 	var $result : Object
@@ -168,15 +167,15 @@ Function _generateEmbedding($text : Text) -> $vector : Object
 	Else 
 		ALERT(cs.AppUtils.me.locP("msg_embed_null"; New collection($settings.embedding.server; $settings.embedding.model)))
 	End if 
-
-//MARK: - Execute Search
-
-Function _executeSearch($mandateText : Text; $filterRegion : Text; $filterAssetType : Text; $filterMinYield : Real) -> $results : Collection
+	
+	//MARK: - Execute Search
+	
+Function _executeSearch($mandateText : Text; $filterRegion : Text; $filterAssetType : Text; $filterMinYield : Real)->$results : Collection
 	$results:=New collection
 	
 	If ($mandateText="")
 		ALERT(cs.AppUtils.me.loc("msg_enter_mandate"))
-		return
+		return 
 	End if 
 	
 	// 1. Generate embedding for the mandate
@@ -185,7 +184,7 @@ Function _executeSearch($mandateText : Text; $filterRegion : Text; $filterAssetT
 	
 	If ($mandateVector=Null)
 		ALERT(cs.AppUtils.me.loc("msg_embed_failed"))
-		return
+		return 
 	End if 
 	
 	// 2. Combined ORDA query — vector similarity + conventional filters in a single native pass.
@@ -215,7 +214,7 @@ Function _executeSearch($mandateText : Text; $filterRegion : Text; $filterAssetT
 	// Build human-readable query for status display
 	var $displayQuery : Text
 	$displayQuery:=Replace string($queryString; ":1"; "{vector:[mandateVector]; metric:cosine; threshold:"+String($vectorParam.threshold)+"}")
-	$displayQuery:=Replace string($displayQuery; ":2"; "\""+ $filterRegion+"\"")
+	$displayQuery:=Replace string($displayQuery; ":2"; "\""+$filterRegion+"\"")
 	$displayQuery:=Replace string($displayQuery; ":3"; "\""+$filterAssetType+"\"")
 	$displayQuery:=Replace string($displayQuery; ":4"; String($filterMinYield))
 	This.lastQueryDisplay:="ds.Properties.query(\""+$displayQuery+"\")"
@@ -256,16 +255,16 @@ Function _executeSearch($mandateText : Text; $filterRegion : Text; $filterAssetT
 	$history.searchDate:=Current date
 	$history.resultCount:=$results.length
 	$history.save()
-
-//MARK: - Load Demo Data (was PM_LoadDemoData)
-
+	
+	//MARK: - Load Demo Data (was PM_LoadDemoData)
+	
 Function _loadDemoData()
 	var $file : 4D.File
 	$file:=File("/RESOURCES/demo_properties.json")
 	
 	If (Not($file.exists))
 		ALERT(cs.AppUtils.me.loc("msg_demo_not_found"))
-		return
+		return 
 	End if 
 	
 	var $properties : Collection
@@ -273,7 +272,7 @@ Function _loadDemoData()
 	
 	If ($properties=Null)
 		ALERT(cs.AppUtils.me.loc("msg_demo_parse_fail"))
-		return
+		return 
 	End if 
 	
 	// Clear existing data (demo reset)
@@ -347,9 +346,9 @@ Function _loadDemoData()
 	End if 
 	This.statusMessage:=$msg
 	This._refreshHeaderSummary()
-
-//MARK: - Regenerate all embeddings
-
+	
+	//MARK: - Regenerate all embeddings
+	
 Function _regenerateEmbeddings()
 	var $all : cs.PropertiesSelection
 	$all:=ds.Properties.all()
@@ -358,7 +357,7 @@ Function _regenerateEmbeddings()
 	
 	If ($total=0)
 		This.statusMessage:=cs.AppUtils.me.loc("msg_no_props_regen")
-		return
+		return 
 	End if 
 	
 	var $success : Integer
@@ -396,9 +395,9 @@ Function _regenerateEmbeddings()
 		This.statusMessage:=This.statusMessage+cs.AppUtils.me.locP("msg_regen_failed"; New collection($fail))
 	End if 
 	This._refreshHeaderSummary()
-
-//MARK: - Form & form objects event handlers
-
+	
+	//MARK: - Form & form objects event handlers
+	
 Function formEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Load)
@@ -427,9 +426,9 @@ Function formEventHandler($formEventCode : Integer)
 			End if 
 			
 	End case 
-
-//MARK: - Slider event handler
-
+	
+	//MARK: - Slider event handler
+	
 Function sliderYieldEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Data Change)
@@ -437,9 +436,9 @@ Function sliderYieldEventHandler($formEventCode : Integer)
 			$yieldVal:=This.minYield/10
 			This.minYieldDisplay:=String($yieldVal; "##0.0")+"%"
 	End case 
-
-//MARK: - Button: Execute Intelligence Match
-
+	
+	//MARK: - Button: Execute Intelligence Match
+	
 Function btnExecuteEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -476,18 +475,18 @@ Function btnExecuteEventHandler($formEventCode : Integer)
 				OBJECT SET ENABLED(*; "btnExecute"; True)
 			End if 
 	End case 
-
-//MARK: - Button: Load Demo Data
-
+	
+	//MARK: - Button: Load Demo Data
+	
 Function btnLoadDataEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This.statusMessage:=cs.AppUtils.me.loc("msg_loading_demo")
 			This._loadDemoData()
 	End case 
-
-//MARK: - Button: Regenerate Embeddings
-
+	
+	//MARK: - Button: Regenerate Embeddings
+	
 Function btnReembedEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -498,14 +497,15 @@ Function btnReembedEventHandler($formEventCode : Integer)
 			Else 
 				var $settings : Object
 				$settings:=cs.AppUtils.me.readSettings()
-				If (CONFIRM(cs.AppUtils.me.locP("msg_confirm_regen"; New collection($count; $settings.embedding.server; $settings.embedding.model)); cs.AppUtils.me.loc("msg_btn_regenerate"); cs.AppUtils.me.loc("msg_btn_cancel")))
+				CONFIRM(cs.AppUtils.me.locP("msg_confirm_regen"; New collection($count; $settings.embedding.server; $settings.embedding.model)); cs.AppUtils.me.loc("msg_btn_regenerate"); cs.AppUtils.me.loc("msg_btn_cancel"))
+				If (OK=1)
 					This._regenerateEmbeddings()
 				End if 
 			End if 
 	End case 
-
-//MARK: - Button: Open AI Config dialog
-
+	
+	//MARK: - Button: Open AI Config dialog
+	
 Function btnAIConfigEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -526,9 +526,9 @@ Function btnAIConfigEventHandler($formEventCode : Integer)
 			This._applyLocalization()
 			This._refreshHeaderSummary()
 	End case 
-
-//MARK: - Demo Scenarios
-
+	
+	//MARK: - Demo Scenarios
+	
 Function btnDemoAEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -539,7 +539,7 @@ Function btnDemoAEventHandler($formEventCode : Integer)
 			This.minYieldDisplay:="0.0%"
 			This.statusMessage:=cs.AppUtils.me.loc("msg_demo_a_loaded")
 	End case 
-
+	
 Function btnDemoBEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -550,7 +550,7 @@ Function btnDemoBEventHandler($formEventCode : Integer)
 			This.minYieldDisplay:="5.0%"
 			This.statusMessage:=cs.AppUtils.me.loc("msg_demo_b_loaded")
 	End case 
-
+	
 Function btnDemoCEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -561,7 +561,7 @@ Function btnDemoCEventHandler($formEventCode : Integer)
 			This.minYieldDisplay:="0.0%"
 			This.statusMessage:=cs.AppUtils.me.loc("msg_demo_c_loaded")
 	End case 
-
+	
 Function btnDemoDEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -572,9 +572,9 @@ Function btnDemoDEventHandler($formEventCode : Integer)
 			This.minYieldDisplay:="4.0%"
 			This.statusMessage:=cs.AppUtils.me.loc("msg_demo_d_loaded")
 	End case 
-
-//MARK: - Listbox: Results selection
-
+	
+	//MARK: - Listbox: Results selection
+	
 Function listboxResultsEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Selection Change)
@@ -614,9 +614,9 @@ Function listboxResultsEventHandler($formEventCode : Integer)
 				CALL WORKER("semanticWorker"; "_semanticHighlightsAsync"; $mandate; $description; $matchScore; $isFrench; $formWindow)
 			End if 
 	End case 
-
-//MARK: - Expand / Collapse results panel
-
+	
+	//MARK: - Expand / Collapse results panel
+	
 Function _collapseResults($center : Boolean)
 	// Hide all right-panel objects and shrink the window
 	This._resultsExpanded:=False
@@ -655,19 +655,22 @@ Function _collapseResults($center : Boolean)
 	// Resize window to compact width
 	var $compactWidth : Integer
 	$compactWidth:=540
+	var $width; $height : Integer
+	FORM GET PROPERTIES(Current form name; $width; $height)
+	
 	If ($center)
 		var $screenL; $screenT; $screenR; $screenB : Integer
 		SCREEN COORDINATES($screenL; $screenT; $screenR; $screenB)
 		var $winL; $winT : Integer
 		$winL:=($screenR-$screenL-$compactWidth)/2
-		$winT:=($screenB-$screenT-900)/2
-		SET WINDOW RECT($winL; $winT; $winL+$compactWidth; $winT+900; Current form window)
+		$winT:=($screenB-$screenT-$height)/2
+		SET WINDOW RECT($winL; $winT; $winL+$compactWidth; $winT+$height; Current form window)
 	Else 
 		var $curL; $curT; $curR; $curB : Integer
 		GET WINDOW RECT($curL; $curT; $curR; $curB; Current form window)
 		SET WINDOW RECT($curL; $curT; $curL+$compactWidth; $curB; Current form window)
 	End if 
-
+	
 Function _expandResults()
 	This._resultsExpanded:=True
 	var $rightObjects : Collection
@@ -699,9 +702,14 @@ Function _expandResults()
 	OBJECT SET COORDINATES(*; "separatorBtns2"; 28; 636; 386; 636)
 	OBJECT SET COORDINATES(*; "btnLoadData"; 24; 652; 202; 690)
 	OBJECT SET COORDINATES(*; "btnReembed"; 210; 652; 390; 690)
-	OBJECT SET COORDINATES(*; "labelStatus"; 24; 706; 390; 860)
+	var $width; $height : Integer
+	FORM GET PROPERTIES(Current form name; $width; $height)
+	var $y : Integer
+	$y:=$height-94
+	OBJECT SET COORDINATES(*; "labelStatus"; 24; $y; 390; $y+54)
 	// Restore footer text width
-	OBJECT SET COORDINATES(*; "footerText"; 28; 876; 628; 896)
+	$y:=$height-24
+	OBJECT SET COORDINATES(*; "footerText"; 28; $y; 628; $y+21)
 	// Expand window keeping current position
 	var $fullWidth : Integer
 	$fullWidth:=1440
@@ -739,18 +747,18 @@ Function _expandResults()
 		If ($curL<$screenL)
 			$curL:=$screenL
 		End if 
-	End if
+	End if 
 	SET WINDOW RECT($curL; $curT; $curL+$fullWidth; $curB; Current form window)
-
-//MARK: - Callback: Highlights received from worker
-
+	
+	//MARK: - Callback: Highlights received from worker
+	
 Function _onHighlightsReceived($highlights : Text)
 	This.detailHighlights:=$highlights
 	SET TIMER(0)
 	OBJECT SET VISIBLE(*; "progressAnalysis"; False)
-
-//MARK: - Localization: Apply titles to form objects
-
+	
+	//MARK: - Localization: Apply titles to form objects
+	
 Function _applyLocalization()
 	// Programmatically set all form object titles using Localized string().
 	// This ensures XLIFF strings display even if form JSON :xliff: refs don't resolve.
@@ -797,9 +805,9 @@ Function _applyLocalization()
 	
 	// Footer
 	OBJECT SET TITLE(*; "footerText"; cs.AppUtils.me.loc("pm_footer"))
-
-//MARK: - Button: Close window
-
+	
+	//MARK: - Button: Close window
+	
 Function btnCloseEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -809,16 +817,17 @@ Function btnCloseEventHandler($formEventCode : Integer)
 		: ($formEventCode=On Mouse Leave)
 			OBJECT SET FORMAT(*; "btnClose"; ";path:/RESOURCES/images/mac/close.png")
 	End case 
-
-//MARK: - Button: Collapse results
-
+	
+	//MARK: - Button: Collapse results
+	
 Function btnCollapseResultsEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This._collapseResults()
 	End case 
-
-//MARK: - Button: Drag window
-
+	
+	//MARK: - Button: Drag window
+	
 Function btnDragWindowEventHandler($formEventCode : Integer)
 	DRAG WINDOW
+	

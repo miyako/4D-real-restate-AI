@@ -1,25 +1,21 @@
 ﻿{
 	"embedding": {
-		"server": "openai",
-		"model": "text-embedding-ada-002"
+		"server": "ctranslate2",
+		"model": "e5-base-v2"
 	},
 	"chat": {
 		"server": "openai",
 		"model": "gpt-5.4"
 	},
-	"lastEmbeddingDate": "2026-03-22T00:26:23",
+	"lastEmbeddingDate": "2026-03-22T00:55:35",
 	"language": "ja",
 	"servers": {
-		"ollama": {
-			"baseURL": "http://127.0.0.1:11434/v1",
-			"apiKey": ""
-		},
-		"lmstudio": {
-			"baseURL": "http://localhost:1234/v1",
-			"apiKey": ""
-		},
 		"openai": {
 			"baseURL": "https://api.openai.com/v1",
+			"apiKey": ""
+		},
+		"ctranslate2": {
+			"baseURL": "http://127.0.0.1:8081/v1",
 			"apiKey": ""
 		}
 	}

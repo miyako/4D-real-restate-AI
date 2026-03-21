@@ -26,12 +26,16 @@ $event.onTerminate:=Formula(LOG EVENT(Into 4D debug message; (["process"; $1.pid
 
 $port:=8081
 
+var $options : Object
 $options:={}
 var $huggingfaces : cs.event.huggingfaces
 
+var $folder : 4D.Folder
+var $path; $URL : Text
 $folder:=$homeFolder.folder("e5-base-v2")
 $path:="e5-base-v2-ct2-int8"
 $URL:="keisuke-miyako/e5-base-v2-ct2-int8"
+var $embeddings : cs.event.huggingface
 $embeddings:=cs.event.huggingface.new($folder; $URL; $path; "embedding")
 
 $huggingfaces:=cs.event.huggingfaces.new([$embeddings])
