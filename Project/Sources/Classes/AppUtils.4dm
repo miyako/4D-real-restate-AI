@@ -18,12 +18,11 @@ Function readSettings()->$settings : Object
 		$settings:=JSON Parse($sf.getText("utf-8"))
 	Else 
 		// Defaults
-		$settings:={embedding: {server: "ollama"; model: "nomic-embed-text"}; \
-			chat: {server: "ollama"; model: "llama3.2"}; \
+		$settings:={embedding: {server: "openai"; model: "text-embedding-ada-002"}; \
+			chat: {server: "openai"; model: "gtp-5.4"}; \
 			lastEmbeddingDate: ""; \
 			language: "en"; \
-			servers: {ollama: {baseURL: "http://127.0.0.1:11434/v1"; apiKey: "ollama"}; \
-			lmstudio: {baseURL: "http://localhost:1234/v1"; apiKey: "lm-studio"}; \
+			servers: {\
 			openai: {baseURL: "https://api.openai.com/v1"; apiKey: ""}}}
 	End if 
 	
