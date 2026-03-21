@@ -758,5 +758,6 @@
 	"memorizeGeometry": false,
 	"formSizeAnchor": "bgPicture",
 	"rightMargin": 0,
-	"bottomMargin": 0
+	"bottomMargin": 0,
+	"menuBar": "Barre #1"
 }
