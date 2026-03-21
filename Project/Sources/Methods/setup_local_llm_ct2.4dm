@@ -19,7 +19,7 @@ Function onTerminate($worker : 4D.SystemWorker; $params : Object)
 */
 
 $event.onError:=Formula(ALERT($2.message))
-$event.onSuccess:=Formula(ALERT($2.models.extract("name").join(",")+" loaded!"))
+//$event.onSuccess:=Formula(ALERT($2.models.extract("name").join(",")+" loaded!"))
 $event.onData:=Formula(LOG EVENT(Into 4D debug message; This.file.fullName+":"+String((This.range.end/This.range.length)*100; "###.00%")))
 $event.onResponse:=Formula(LOG EVENT(Into 4D debug message; This.file.fullName+":download complete"))
 $event.onTerminate:=Formula(LOG EVENT(Into 4D debug message; (["process"; $1.pid; "terminated!"].join(" "))))
