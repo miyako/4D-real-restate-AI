@@ -37,11 +37,15 @@ Class constructor()
 		$lang:="en"
 	End if 
 	var $langIdx : Integer
-	If ($lang="fr")
-		$langIdx:=1
-	Else 
-		$langIdx:=0
-	End if 
+	Case of 
+		: ($lang="ja")
+			$langIdx:=2
+		: ($lang="fr")
+			$langIdx:=1
+		Else 
+			$langIdx:=0
+	End case 
+	
 	This.languageList:={values: ["English"; "Français"; "日本語"]; index: $langIdx}
 	
 	// Embed server dropdown
