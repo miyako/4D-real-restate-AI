@@ -7,6 +7,10 @@
 		"ctranslate2": {
 			"github": "miyako/ctranslate2",
 			"version": "latest"
+		},
+		"llama cpp": {
+			"github": "miyako/llama-cpp",
+			"version": "latest"
 		}
 	}
 }
