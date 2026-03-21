@@ -31,7 +31,7 @@ $options:={}
 var $huggingfaces : cs.event.huggingfaces
 
 var $folder : 4D.Folder
-var $path; $URL : Text
+var $path : Text
 $folder:=$homeFolder.folder("e5-base-v2")
 $path:="e5-base-v2-ct2-int8"
 $URL:="keisuke-miyako/e5-base-v2-ct2-int8"
