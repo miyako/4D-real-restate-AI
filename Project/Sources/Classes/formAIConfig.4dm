@@ -1,4 +1,3 @@
-//%attributes = {"lang":"en"} comment added and reserved by 4D
 // Class: formAIConfig
 // Description: Form class for the AI Configuration dialog.
 //   Allows selecting separate embed/chat servers & models, and managing OpenAI API key.
@@ -42,7 +41,7 @@ Class constructor()
 	Else 
 		$langIdx:=0
 	End if 
-	This.languageList:={values: ["English"; "Français"]; index: $langIdx}
+	This.languageList:={values: ["English"; "Français"; "日本語"]; index: $langIdx}
 	
 	// Embed server dropdown
 	var $embedIdx : Integer
@@ -71,11 +70,11 @@ Class constructor()
 	This._updateApiKeyStatus()
 	
 	This.statusText:=cs.AppUtils.me.loc("msg_ac_load_models")
-
-
-//MARK: - Create AI client
-
-Function _createClient($serverName : Text) -> $client : Object
+	
+	
+	//MARK: - Create AI client
+	
+Function _createClient($serverName : Text)->$client : Object
 	var $settings : Object
 	$settings:=cs.AppUtils.me.readSettings()
 	var $serverConfig : Object
@@ -83,19 +82,19 @@ Function _createClient($serverName : Text) -> $client : Object
 	
 	If ($serverConfig=Null)
 		This.statusText:=cs.AppUtils.me.locP("msg_ac_server_not_config"; New collection($serverName))
-		return
+		return 
 	End if 
 	
 	// For OpenAI, check API key availability but don't prompt here
 	If ($serverName="openai") && (($serverConfig.apiKey="") || ($serverConfig.apiKey=Null))
 		This.statusText:=cs.AppUtils.me.loc("msg_ac_no_api_key")
-		return
+		return 
 	End if 
 	
 	$client:=Try(cs.AIKit.OpenAI.new({apiKey: $serverConfig.apiKey; baseURL: $serverConfig.baseURL}))
-
-//MARK: - Load models for a role (embed or chat)
-
+	
+	//MARK: - Load models for a role (embed or chat)
+	
 Function _loadModels($role : Text; $serverName : Text; $currentModel : Text)
 	var $client : Object
 	$client:=This._createClient($serverName)
@@ -106,7 +105,7 @@ Function _loadModels($role : Text; $serverName : Text; $currentModel : Text)
 		Else 
 			This.chatModelList:={values: New collection($currentModel); index: 0}
 		End if 
-		return
+		return 
 	End if 
 	
 	var $result : Object
@@ -135,9 +134,9 @@ Function _loadModels($role : Text; $serverName : Text; $currentModel : Text)
 	Else 
 		This.chatModelList:={values: $models; index: $idx}
 	End if 
-
-//MARK: - API key status
-
+	
+	//MARK: - API key status
+	
 Function _updateApiKeyStatus()
 	var $settings : Object
 	$settings:=cs.AppUtils.me.readSettings()
@@ -146,9 +145,9 @@ Function _updateApiKeyStatus()
 	Else 
 		This.apiKeyStatus:=cs.AppUtils.me.loc("msg_ac_no_key")
 	End if 
-
-//MARK: - Event handlers
-
+	
+	//MARK: - Event handlers
+	
 Function formEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Load)
@@ -174,18 +173,21 @@ Function formEventHandler($formEventCode : Integer)
 			OBJECT SET RGB COLORS(*; "ddChatServer"; $ddFg; $ddBg)
 			OBJECT SET RGB COLORS(*; "ddChatModel"; $ddFg; $ddBg)
 	End case 
-
-//MARK: - Language changed
-
+	
+	//MARK: - Language changed
+	
 Function ddLanguageEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Data Change)
 			var $lang : Text
-			If (This.languageList.index=1)
-				$lang:="fr"
-			Else 
-				$lang:="en"
-			End if 
+			Case of 
+				: (This.languageList.index=2)
+					$lang:="ja"
+				: (This.languageList.index=1)
+					$lang:="fr"
+				Else 
+					$lang:="en"
+			End case 
 			// Save preference immediately
 			var $settings : Object
 			$settings:=cs.AppUtils.me.readSettings()
@@ -196,9 +198,9 @@ Function ddLanguageEventHandler($formEventCode : Integer)
 			// Refresh Settings dialog labels
 			This._applyLocalization()
 	End case 
-
-//MARK: - Embed server changed
-
+	
+	//MARK: - Embed server changed
+	
 Function ddEmbedServerEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Data Change)
@@ -208,9 +210,9 @@ Function ddEmbedServerEventHandler($formEventCode : Integer)
 			This._loadModels("embed"; $serverName; "")
 			This.statusText:=cs.AppUtils.me.locP("msg_ac_models_loaded"; New collection(This.embedModelList.values.length; $serverName))
 	End case 
-
-//MARK: - Chat server changed
-
+	
+	//MARK: - Chat server changed
+	
 Function ddChatServerEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Data Change)
@@ -220,9 +222,9 @@ Function ddChatServerEventHandler($formEventCode : Integer)
 			This._loadModels("chat"; $serverName; "")
 			This.statusText:=cs.AppUtils.me.locP("msg_ac_models_loaded"; New collection(This.chatModelList.values.length; $serverName))
 	End case 
-
-//MARK: - Refresh embed models
-
+	
+	//MARK: - Refresh embed models
+	
 Function btnRefreshEmbedEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -238,9 +240,9 @@ Function btnRefreshEmbedEventHandler($formEventCode : Integer)
 			This._loadModels("embed"; $serverName; $currentModel)
 			This.statusText:=cs.AppUtils.me.locP("msg_ac_models_loaded"; New collection(This.embedModelList.values.length; $serverName))
 	End case 
-
-//MARK: - Refresh chat models
-
+	
+	//MARK: - Refresh chat models
+	
 Function btnRefreshChatEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -256,9 +258,9 @@ Function btnRefreshChatEventHandler($formEventCode : Integer)
 			This._loadModels("chat"; $serverName; $currentModel)
 			This.statusText:=cs.AppUtils.me.locP("msg_ac_models_loaded"; New collection(This.chatModelList.values.length; $serverName))
 	End case 
-
-//MARK: - Set OpenAI API key
-
+	
+	//MARK: - Set OpenAI API key
+	
 Function btnSetApiKeyEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -273,9 +275,9 @@ Function btnSetApiKeyEventHandler($formEventCode : Integer)
 				This.statusText:=cs.AppUtils.me.loc("msg_ac_api_saved")
 			End if 
 	End case 
-
-//MARK: - Save
-
+	
+	//MARK: - Save
+	
 Function btnSaveEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
@@ -307,17 +309,17 @@ Function btnSaveEventHandler($formEventCode : Integer)
 			
 			CANCEL  // Close the dialog (returns 0)
 	End case 
-
-//MARK: - Cancel
-
+	
+	//MARK: - Cancel
+	
 Function btnCancelEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			CANCEL  // Close without saving
 	End case 
-
-//MARK: - Localization: Apply titles to form objects
-
+	
+	//MARK: - Localization: Apply titles to form objects
+	
 Function _applyLocalization()
 	OBJECT SET TITLE(*; "headerTitle"; cs.AppUtils.me.loc("ac_title"))
 	OBJECT SET TITLE(*; "lblLangSection"; cs.AppUtils.me.loc("ac_lang_section"))
@@ -334,4 +336,5 @@ Function _applyLocalization()
 	OBJECT SET TITLE(*; "btnSetApiKey"; cs.AppUtils.me.loc("ac_set_key"))
 	OBJECT SET TITLE(*; "btnSave"; cs.AppUtils.me.loc("ac_save"))
 	OBJECT SET TITLE(*; "btnCancel"; cs.AppUtils.me.loc("ac_cancel"))
-
+	
+	

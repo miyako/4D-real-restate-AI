@@ -7,13 +7,9 @@
 	"windowSizingX": "fixed",
 	"windowSizingY": "fixed",
 	"windowMinWidth": 1440,
-	"windowMinHeight": 900,
+	"windowMinHeight": 800,
 	"windowMaxWidth": 1440,
-	"windowMaxHeight": 900,
-	"rightMargin": 0,
-	"bottomMargin": 0,
-	"width": 1440,
-	"height": 900,
+	"windowMaxHeight": 800,
 	"events": [
 		"onLoad",
 		"onClick",
@@ -25,27 +21,20 @@
 	"formClass": "formPrimeMatch",
 	"pages": [
 		{
-			"objects": {}
-		},
-		{
 			"objects": {
-				"bgFill": {
-					"type": "rectangle",
-					"class": "bgDark",
-					"left": -1,
-					"top": 0,
-					"width": 1442,
-					"height": 900
-				},
 				"bgPicture": {
 					"type": "picture",
 					"left": 0,
 					"top": 0,
 					"width": 1440,
-					"height": 900,
+					"height": 800,
 					"picture": "/RESOURCES/bg_main.png",
 					"pictureFormat": "scaled"
-				},
+				}
+			}
+		},
+		{
+			"objects": {
 				"headerAccent": {
 					"type": "rectangle",
 					"class": "accentLine",
@@ -145,7 +134,7 @@
 					"top": 198,
 					"width": 200,
 					"height": 26,
-					"dataSource": "Form.minYield",
+					"dataSource": "Form:C1466.minYield",
 					"dataSourceTypeHint": "integer",
 					"min": 0,
 					"max": 100,
@@ -190,7 +179,7 @@
 					"top": 266,
 					"width": 366,
 					"height": 154,
-					"dataSource": "Form.mandateText",
+					"dataSource": "Form:C1466.mandateText",
 					"enterable": true,
 					"multiline": "yes",
 					"wordwrap": "automatic",
@@ -348,7 +337,7 @@
 					"left": 24,
 					"top": 706,
 					"width": 366,
-					"height": 154,
+					"height": 54,
 					"dataSource": "Form:C1466.statusMessage",
 					"enterable": false,
 					"fontSize": 12,
@@ -402,9 +391,9 @@
 					"width": 990,
 					"height": 340,
 					"listboxType": "collection",
-					"dataSource": "Form.searchResults",
-					"currentItemSource": "Form.selectedResult",
-					"currentItemPositionSource": "Form.selectedIndex",
+					"dataSource": "Form:C1466.searchResults",
+					"currentItemSource": "Form:C1466.selectedResult",
+					"currentItemPositionSource": "Form:C1466.selectedIndex",
 					"selectionMode": "single",
 					"sortable": true,
 					"resizable": false,
@@ -433,7 +422,7 @@
 								"class": "colHeaderGold"
 							},
 							"name": "colMatch",
-							"dataSource": "This.matchScore",
+							"dataSource": "This:C1470.matchScore",
 							"width": 90,
 							"textAlign": "center",
 							"fontSize": 13,
@@ -451,7 +440,7 @@
 								"class": "colHeader"
 							},
 							"name": "colName",
-							"dataSource": "This.propertyName",
+							"dataSource": "This:C1470.propertyName",
 							"width": 273,
 							"enterable": false,
 							"footer": {
@@ -465,7 +454,7 @@
 								"class": "colHeader"
 							},
 							"name": "colRegion",
-							"dataSource": "This.region",
+							"dataSource": "This:C1470.region",
 							"width": 150,
 							"enterable": false,
 							"footer": {
@@ -479,7 +468,7 @@
 								"class": "colHeader"
 							},
 							"name": "colType",
-							"dataSource": "This.assetType",
+							"dataSource": "This:C1470.assetType",
 							"width": 140,
 							"enterable": false,
 							"footer": {
@@ -493,7 +482,7 @@
 								"class": "colHeader"
 							},
 							"name": "colYield",
-							"dataSource": "This.askingYield",
+							"dataSource": "This:C1470.askingYield",
 							"width": 90,
 							"textAlign": "center",
 							"enterable": false,
@@ -508,7 +497,7 @@
 								"class": "colHeader"
 							},
 							"name": "colPrice",
-							"dataSource": "This.askingPrice",
+							"dataSource": "This:C1470.askingPrice",
 							"width": 130,
 							"numberFormat": "###,###,##0",
 							"textAlign": "right",
@@ -524,7 +513,7 @@
 								"class": "colHeader"
 							},
 							"name": "colSqft",
-							"dataSource": "This.sqft",
+							"dataSource": "This:C1470.sqft",
 							"width": 100,
 							"numberFormat": "###,###,##0",
 							"textAlign": "right",
@@ -572,7 +561,7 @@
 					"left": 422,
 					"top": 534,
 					"width": 480,
-					"height": 292
+					"height": 192
 				},
 				"labelDescTitle": {
 					"type": "text",
@@ -589,7 +578,7 @@
 					"left": 428,
 					"top": 540,
 					"width": 468,
-					"height": 280,
+					"height": 180,
 					"dataSource": "Form:C1466.detailDescription",
 					"enterable": false,
 					"multiline": "yes",
@@ -604,7 +593,7 @@
 					"left": 922,
 					"top": 534,
 					"width": 500,
-					"height": 292
+					"height": 192
 				},
 				"labelHighlightsTitle": {
 					"type": "text",
@@ -621,7 +610,7 @@
 					"top": 520,
 					"width": 300,
 					"height": 12,
-					"dataSource": "Form.analysisProgress",
+					"dataSource": "Form:C1466.analysisProgress",
 					"min": 0,
 					"max": 100
 				},
@@ -631,7 +620,7 @@
 					"left": 928,
 					"top": 540,
 					"width": 488,
-					"height": 280,
+					"height": 180,
 					"dataSource": "Form:C1466.detailHighlights",
 					"enterable": false,
 					"multiline": "yes",
@@ -644,7 +633,7 @@
 					"type": "input",
 					"class": "readonlyDisplay",
 					"left": 428,
-					"top": 830,
+					"top": 730,
 					"width": 990,
 					"height": 28,
 					"dataSource": "Form:C1466.detailMetrics",
@@ -658,9 +647,9 @@
 					"type": "text",
 					"class": "dimText",
 					"left": 28,
-					"top": 876,
+					"top": 776,
 					"width": 600,
-					"height": 20,
+					"height": 21,
 					"text": ":xliff:pm_footer",
 					"textAlign": "left"
 				},
@@ -668,7 +657,7 @@
 					"type": "input",
 					"class": "readonlyDisplay dimText",
 					"left": 466,
-					"top": 876,
+					"top": 776,
 					"width": 954,
 					"height": 15,
 					"dataSource": "Form:C1466.providerLabel",
@@ -680,7 +669,7 @@
 					"type": "button",
 					"left": 0,
 					"top": 0,
-					"width": 1441,
+					"width": 1440,
 					"height": 56,
 					"text": "",
 					"style": "custom",
@@ -743,14 +732,31 @@
 					"focusable": true
 				}
 			}
+		},
+		{
+			"objects": {
+				"bgFill": {
+					"type": "rectangle",
+					"class": "bgDark",
+					"left": 0,
+					"top": 0,
+					"width": 1440,
+					"height": 800,
+					"right": 1440
+				}
+			}
 		}
 	],
-	"geometryStamp": 60,
+	"geometryStamp": 144,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {}
 		}
-	}
+	},
+	"memorizeGeometry": false,
+	"formSizeAnchor": "bgPicture",
+	"rightMargin": 0,
+	"bottomMargin": 0
 }
