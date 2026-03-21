@@ -88,9 +88,11 @@
 					"top": 88,
 					"width": 200,
 					"height": 26,
-					"dataSource": "Form.languageList",
+					"dataSource": "Form:C1466.languageList",
 					"dataSourceTypeHint": "object",
-					"events": ["onDataChange"],
+					"events": [
+						"onDataChange"
+					],
 					"method": "ObjectMethods/ddLanguage.4dm",
 					"enterable": false
 				},
@@ -130,9 +132,11 @@
 					"top": 164,
 					"width": 200,
 					"height": 26,
-					"dataSource": "Form.embedServerList",
+					"dataSource": "Form:C1466.embedServerList",
 					"dataSourceTypeHint": "object",
-					"events": ["onDataChange"],
+					"events": [
+						"onDataChange"
+					],
 					"method": "ObjectMethods/ddEmbedServer.4dm",
 					"enterable": false
 				},
@@ -152,7 +156,7 @@
 					"top": 198,
 					"width": 300,
 					"height": 26,
-					"dataSource": "Form.embedModelList",
+					"dataSource": "Form:C1466.embedModelList",
 					"dataSourceTypeHint": "object",
 					"enterable": false
 				},
@@ -166,7 +170,9 @@
 					"text": ":xliff:ac_refresh",
 					"fontSize": 10,
 					"style": "flat",
-					"events": ["onClick"],
+					"events": [
+						"onClick"
+					],
 					"method": "ObjectMethods/btnRefreshEmbed.4dm",
 					"focusable": true
 				},
@@ -206,9 +212,11 @@
 					"top": 276,
 					"width": 200,
 					"height": 26,
-					"dataSource": "Form.chatServerList",
+					"dataSource": "Form:C1466.chatServerList",
 					"dataSourceTypeHint": "object",
-					"events": ["onDataChange"],
+					"events": [
+						"onDataChange"
+					],
 					"method": "ObjectMethods/ddChatServer.4dm",
 					"enterable": false
 				},
@@ -228,7 +236,7 @@
 					"top": 310,
 					"width": 300,
 					"height": 26,
-					"dataSource": "Form.chatModelList",
+					"dataSource": "Form:C1466.chatModelList",
 					"dataSourceTypeHint": "object",
 					"enterable": false
 				},
@@ -242,7 +250,9 @@
 					"text": ":xliff:ac_refresh",
 					"fontSize": 10,
 					"style": "flat",
-					"events": ["onClick"],
+					"events": [
+						"onClick"
+					],
 					"method": "ObjectMethods/btnRefreshChat.4dm",
 					"focusable": true
 				},
@@ -286,7 +296,9 @@
 					"text": ":xliff:ac_set_key",
 					"fontSize": 10,
 					"style": "flat",
-					"events": ["onClick"],
+					"events": [
+						"onClick"
+					],
 					"method": "ObjectMethods/btnSetApiKey.4dm",
 					"focusable": true
 				},
@@ -322,7 +334,9 @@
 					"text": ":xliff:ac_save",
 					"fontSize": 13,
 					"style": "flat",
-					"events": ["onClick"],
+					"events": [
+						"onClick"
+					],
 					"method": "ObjectMethods/btnSave.4dm",
 					"focusable": true
 				},
@@ -336,11 +350,14 @@
 					"text": ":xliff:ac_cancel",
 					"fontSize": 13,
 					"style": "flat",
-					"events": ["onClick"],
+					"events": [
+						"onClick"
+					],
 					"method": "ObjectMethods/btnCancel.4dm",
 					"focusable": true
 				}
 			}
 		}
-	]
+	],
+	"menuBar": "Barre #1"
 }
