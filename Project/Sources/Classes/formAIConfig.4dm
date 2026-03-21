@@ -23,11 +23,12 @@ property statusText : Text
 //MARK: - Constructor
 
 Class constructor()
-	var $serverNames : Collection
-	$serverNames:=New collection("ollama"; "lmstudio"; "openai")
 	
 	var $settings : Object
 	$settings:=cs.AppUtils.me.readSettings()
+	
+	var $serverNames : Collection
+	$serverNames:=OB Keys($settings.servers)
 	
 	// Language dropdown
 	var $lang : Text
