@@ -1,13 +1,13 @@
 ﻿{
 	"embedding": {
-		"server": "lmstudio",
-		"model": "text-embedding-nomic-embed-text-v1.5"
+		"server": "openai",
+		"model": "text-embedding-ada-002"
 	},
 	"chat": {
-		"server": "lmstudio",
-		"model": "qwen/qwen3-4b-2507"
+		"server": "openai",
+		"model": "gpt-5.4"
 	},
-	"lastEmbeddingDate": "2026-02-13T14:45:23",
+	"lastEmbeddingDate": "2026-03-22T00:26:23",
 	"language": "ja",
 	"servers": {
 		"ollama": {
