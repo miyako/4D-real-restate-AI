@@ -56,22 +56,34 @@ threads: $threads; \
 threads_batch: $threads; \
 threads_http: $threads; \
 log_disable: False; \
-n_gpu_layers: -1}
-
-//; \
+n_gpu_layers: -1; \
 temperature: 1; \
 top_p: 1; \
 top_k: 20; \
 presence_penalty: 2; \
 repeat_penalty: 1}
 
+//箇条書き特性が強い
+$folder:=$homeFolder.folder("RakutenAI-2.0-mini-instruct")
+$path:="RakutenAI-2.0-mini-instruct-Q4_k_m.gguf"
+$URL:="keisuke-miyako/RakutenAI-2.0-mini-instruct-gguf-q4_k_m"
+
+//自然で丁寧な文章
 $folder:=$homeFolder.folder("LFM2.5-1.2B-JP")
 $path:="LFM2.5-1.2B-JP-Q4_k_m.gguf"
 $URL:="keisuke-miyako/LFM2.5-1.2B-JP-q4_k_m"
 
-$folder:=$homeFolder.folder("RakutenAI-2.0-mini-instruct")
-$path:="RakutenAI-2.0-mini-instruct-Q4_k_m.gguf"
-$URL:="keisuke-miyako/RakutenAI-2.0-mini-instruct-gguf-q4_k_m"
+//まとめ能力が高い
+$folder:=$homeFolder.folder("TinySwallow-1.5B-Instruct")
+$path:="TinySwallow-1.5B-Instruct-Q4_k_m.gguf"
+$URL:="keisuke-miyako/TinySwallow-1.5B-Instruct-gguf-q4_k_m"
+
+/*
+problems with hallucination, repetition, instruction following
+$folder:=$homeFolder.folder("RakutenAI-7B-instruct")
+$path:="RakutenAI-7B-instruct-Q4_k_m.gguf"
+$URL:="keisuke-miyako/RakutenAI-7B-instruct-gguf-q4_k_m"
+*/
 
 var $embeddings : cs.event.huggingface
 $embeddings:=cs.event.huggingface.new($folder; $URL; $path)

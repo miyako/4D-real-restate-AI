@@ -533,6 +533,7 @@ Function btnDemoAEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This.mandateText:="Carbon-neutral office space for tech tenants with sustainable building features and high-speed connectivity."
+			This.mandateText:="サステナブル仕様、かつ高速ネットワークを完備していること。IT系テナントに最適なカーボンニュートラルオフィス空間を売りにできること。"
 			This.regionList.index:=0
 			This.assetTypeList.index:=0
 			This.minYield:=0
@@ -544,6 +545,7 @@ Function btnDemoBEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This.mandateText:="Value-add opportunities in urban centers with high vacancy, requiring renovation and repositioning to capture rental upside."
+			This.mandateText:="今後の成長が見込める郊外エリアに位置し、本格的なリフォームを必要とするものの、洗練された高級賃貸物件としてリポジショニングできるような物件であること。"
 			This.regionList.index:=0
 			This.assetTypeList.index:=0
 			This.minYield:=50
@@ -555,6 +557,7 @@ Function btnDemoCEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This.mandateText:="Entrepôt logistique du dernier kilomètre en zone urbaine dense, avec certification environnementale et accès multimodal rail-route pour opérateurs e-commerce."
+			This.mandateText:="人口密集都市部に位置していること。EC事業者向けのラストワンマイル物流施設で、環境認証を取得しており、公共交通機関と自家用車、どちらの手段でも通勤加能なマルチモーダルアク"+"セスを備えていること。"
 			This.regionList.index:=0
 			This.assetTypeList.index:=0
 			This.minYield:=0
@@ -566,6 +569,7 @@ Function btnDemoDEventHandler($formEventCode : Integer)
 	Case of 
 		: ($formEventCode=On Clicked)
 			This.mandateText:="Immeuble de bureaux haut de gamme en centre-ville avec potentiel de restructuration lourde, proche des transports en commun, adapté au travail hybride et au bien-être des occupants."
+			This.mandateText:="交通アクセス良好な都心部の高級オフィスビルで、大規模なリフォームが可能であること。ハイブリッドワークに向いており、ライフワークバランスを実現できる職場環境を希望してい"+"る勤務者が満足できるような立地条件と物件であること。"
 			This.regionList.index:=0
 			This.assetTypeList.index:=0
 			This.minYield:=40
@@ -794,21 +798,36 @@ Function _expandResults()
 	// Restore left-panel elements to original sizes
 	OBJECT SET COORDINATES(*; "ddRegion"; 120; 122; 388; 150)
 	OBJECT SET COORDINATES(*; "ddAssetType"; 120; 158; 388; 186)
-	OBJECT SET COORDINATES(*; "txtThesis"; 24; 266; 390; 420)
-	OBJECT SET COORDINATES(*; "btnExecute"; 24; 434; 390; 482)
-	OBJECT SET COORDINATES(*; "separatorBtns"; 28; 498; 386; 498)
 	OBJECT SET COORDINATES(*; "labelDemoSection"; 28; 510; 388; 532)
-	OBJECT SET COORDINATES(*; "btnDemoA"; 24; 538; 202; 576)
-	OBJECT SET COORDINATES(*; "btnDemoB"; 210; 538; 390; 576)
-	OBJECT SET COORDINATES(*; "btnDemoC"; 24; 582; 202; 620)
-	OBJECT SET COORDINATES(*; "btnDemoD"; 210; 582; 390; 620)
-	OBJECT SET COORDINATES(*; "separatorBtns2"; 28; 636; 386; 636)
-	OBJECT SET COORDINATES(*; "btnLoadData"; 24; 652; 202; 690)
-	OBJECT SET COORDINATES(*; "btnReembed"; 210; 652; 390; 690)
+	
 	var $width; $height : Integer
 	FORM GET PROPERTIES(Current form name; $width; $height)
+	
 	var $y : Integer
-	$y:=$height-94
+	$y:=$height-534
+	OBJECT SET COORDINATES(*; "txtThesis"; 24; $y; 390; $y+94)
+	
+	$y:=$height-426
+	OBJECT SET COORDINATES(*; "btnExecute"; 24; $y; 390; $y+48)
+	
+	$y:=$height-362
+	OBJECT SET COORDINATES(*; "separatorBtns"; 28; $y; 386; $y)
+	
+	$y:=$height-224
+	OBJECT SET COORDINATES(*; "separatorBtns2"; 28; $y; 386; $y)
+	
+	$y:=$height-322
+	OBJECT SET COORDINATES(*; "btnDemoA"; 24; $y; 202; $y+38)
+	OBJECT SET COORDINATES(*; "btnDemoB"; 210; $y; 390; $y+38)
+	
+	$y:=$height-278
+	OBJECT SET COORDINATES(*; "btnDemoC"; 24; $y; 202; $y+38)
+	OBJECT SET COORDINATES(*; "btnDemoD"; 210; $y; 390; $y+38)
+	$y:=$height-208
+	OBJECT SET COORDINATES(*; "btnReembed"; 210; $y; 390; $y+38)
+	OBJECT SET COORDINATES(*; "btnLoadData"; 24; $y; 202; $y+38)
+	
+	$y:=$height-154
 	OBJECT SET COORDINATES(*; "labelStatus"; 24; $y; 390; $y+54)
 	// Restore footer text width
 	$y:=$height-24
