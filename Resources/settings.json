@@ -1,13 +1,13 @@
 ﻿{
 	"embedding": {
 		"server": "ctranslate2",
-		"model": "e5-base-v2"
+		"model": "multilingual-e5-base"
 	},
 	"chat": {
-		"server": "openai",
-		"model": "gpt-5.4"
+		"server": "llaam-cpp",
+		"model": "TinySwallow-1.5B-Instruct-Q4_k_m.gguf"
 	},
-	"lastEmbeddingDate": "2026-03-22T00:55:35",
+	"lastEmbeddingDate": "2026-03-22T16:37:13",
 	"language": "ja",
 	"servers": {
 		"openai": {
@@ -16,6 +16,10 @@
 		},
 		"ctranslate2": {
 			"baseURL": "http://127.0.0.1:8081/v1",
+			"apiKey": ""
+		},
+		"llaam-cpp": {
+			"baseURL": "http://127.0.0.1:8080/v1",
 			"apiKey": ""
 		}
 	}

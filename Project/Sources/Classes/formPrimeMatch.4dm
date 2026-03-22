@@ -139,6 +139,62 @@ Function _createClient($serverName : Text)->$client : Object
 	
 	//MARK: - Generate Embedding
 	
+Function _generateEmbeddings($properties : cs.PropertiesSelection)->$vectors : Collection
+	var $settings : Object
+	$settings:=cs.AppUtils.me.readSettings()
+	var $model; $server : Text
+	$model:=$settings.embedding.model
+	$server:=$settings.embedding.server
+	
+	var $client : Object
+	$client:=This._createClient($server)
+	
+	If ($client=Null)
+		return 
+	End if 
+	
+	var $parameters : cs.AIKit.OpenAIEmbeddingsParameters
+	$parameters:=cs.AIKit.OpenAIEmbeddingsParameters.new()
+	
+	var $property : cs.PropertiesEntity
+	var $text; $primaryKeys : Collection
+	$text:=[]
+	$primaryKeys:=[]
+	var $prefix : Text
+	Case of 
+		: ($model="e5@") || ($model="multilingual-e5@")
+			$prefix:="passage: "
+	End case 
+	
+	For each ($property; $properties)
+		$text.push($prefix+$property.description)
+		$primaryKeys.push($property.getKey(dk key as string))
+	End for each 
+	
+	$parameters.extraHeaders:={primaryKeys: $primaryKeys.join(",")}
+	
+	var $result : Object
+	$result:=Try($client.embeddings.create($text; $model; $parameters))
+	
+	If ($result#Null)
+		If ($result.success)
+			$vectors:=[]
+			var $vector : 4D.Vector
+			For each ($vector; $result.vectors)
+				$vectors.push({vector: $vector; ID: $primaryKeys.shift()})
+			End for each 
+		Else 
+			var $errMsg : Text
+			$errMsg:=cs.AppUtils.me.locP("msg_embed_error"; New collection($server; $model))
+			If ($result.errors#Null) && ($result.errors.length>0)
+				$errMsg:=$errMsg+": "+JSON Stringify($result.errors)
+			End if 
+			ALERT($errMsg)
+		End if 
+	Else 
+		ALERT(cs.AppUtils.me.locP("msg_embed_null"; New collection($server; $model)))
+	End if 
+	
 Function _generateEmbedding($text : Text)->$vector : Object
 	var $settings : Object
 	$settings:=cs.AppUtils.me.readSettings()
@@ -360,29 +416,46 @@ Function _regenerateEmbeddings()
 		return 
 	End if 
 	
+	var $entity : cs.PropertiesEntity
+	var $vec : Object
+	var $vecs : Collection
 	var $success : Integer
 	var $fail : Integer
 	$success:=0
 	$fail:=0
 	
-	var $entity : cs.PropertiesEntity
-	For each ($entity; $all)
+	var $i; $batch : Integer
+	$batch:=30
+	For ($i; 0; $all.length-1; $batch)
 		This.statusMessage:=cs.AppUtils.me.locP("msg_regen_progress"; New collection($success+$fail+1; $total))
-		
-		var $vec : Object
-		$vec:=This._generateEmbedding($entity.description)
-		
-		If ($vec#Null)
-			$entity.vectorDesc:=$vec
+		$vecs:=This._generateEmbeddings($all.slice($i; $i+$batch))
+		For each ($vec; $vecs)
+			$entity:=ds.Properties.get($vec.ID)
+			$entity.vectorDesc:=$vec.vector
 			If ($entity.save().success)
 				$success:=$success+1
 			Else 
 				$fail:=$fail+1
 			End if 
-		Else 
-			$fail:=$fail+1
-		End if 
-	End for each 
+		End for each 
+	End for 
+	
+	If (False)
+		For each ($entity; $all)
+			This.statusMessage:=cs.AppUtils.me.locP("msg_regen_progress"; New collection($success+$fail+1; $total))
+			$vec:=This._generateEmbedding($entity.description)
+			If ($vec#Null)
+				$entity.vectorDesc:=$vec
+				If ($entity.save().success)
+					$success:=$success+1
+				Else 
+					$fail:=$fail+1
+				End if 
+			Else 
+				$fail:=$fail+1
+			End if 
+		End for each 
+	End if 
 	
 	// Update last embedding date
 	var $settings : Object

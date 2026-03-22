@@ -32,9 +32,9 @@ var $huggingfaces : cs.event.huggingfaces
 
 var $folder : 4D.Folder
 var $path : Text
-$folder:=$homeFolder.folder("e5-base-v2")
-$path:="e5-base-v2-ct2-int8"
-$URL:="keisuke-miyako/e5-base-v2-ct2-int8"
+$folder:=$homeFolder.folder("multilingual-e5-base")
+$path:="multilingual-e5-base-ct2-int8"
+$URL:="keisuke-miyako/multilingual-e5-base-ct2-int8"
 var $embeddings : cs.event.huggingface
 $embeddings:=cs.event.huggingface.new($folder; $URL; $path; "embedding")
 
