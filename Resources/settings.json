@@ -4,7 +4,7 @@
 		"model": "multilingual-e5-base"
 	},
 	"chat": {
-		"server": "llaam-cpp",
+		"server": "llama-cpp",
 		"model": "TinySwallow-1.5B-Instruct-Q4_k_m.gguf"
 	},
 	"lastEmbeddingDate": "2026-03-22T16:37:13",
