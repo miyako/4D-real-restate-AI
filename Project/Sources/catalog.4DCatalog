@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
-<base name="4D-real-restate-AI" uuid="F7ED097FBA674FC8A55B9FEFAC5A0ABE" collation_locale="en">
+<base name="2. Real Estate AI" uuid="F7ED097FBA674FC8A55B9FEFAC5A0ABE" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="Properties" uuid="A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6" id="1">
 		<field name="ID" uuid="D1A3F5E7B9C2D4F6A8B0C1D2E3F4A5B1" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
@@ -48,6 +48,6 @@
 		</field_ref>
 	</index>
 	<base_extra>
-		<journal_file journal_file_enabled="true"/>
+		<journal_file journal_file_enabled="false"/>
 	</base_extra>
 </base>
