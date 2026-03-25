@@ -871,7 +871,6 @@ Function _expandResults()
 	// Restore left-panel elements to original sizes
 	OBJECT SET COORDINATES(*; "ddRegion"; 120; 122; 388; 150)
 	OBJECT SET COORDINATES(*; "ddAssetType"; 120; 158; 388; 186)
-	OBJECT SET COORDINATES(*; "labelDemoSection"; 28; 510; 388; 532)
 	
 	var $width; $height : Integer
 	FORM GET PROPERTIES(Current form name; $width; $height)
@@ -879,6 +878,9 @@ Function _expandResults()
 	var $y : Integer
 	$y:=$height-534
 	OBJECT SET COORDINATES(*; "txtThesis"; 24; $y; 390; $y+94)
+	
+	$y:=$height-350
+	OBJECT SET COORDINATES(*; "labelDemoSection"; 28; $y; 388; $y+22)
 	
 	$y:=$height-426
 	OBJECT SET COORDINATES(*; "btnExecute"; 24; $y; 390; $y+48)
